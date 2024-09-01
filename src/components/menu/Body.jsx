@@ -72,7 +72,8 @@ export default function Body({ links, selectedLink, setSelectedLink }) {
               variants={blur}
               animate={selectedLink.isActive && selectedLink.index != index ? "open" : "closed"}
             >
-              {getChars(title)}
+              {/* {getChars(title)} */}
+              {title}
             </motion.p>
           </Link>
         );

@@ -26,11 +26,11 @@ export default function Header() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className=" bg-blue-400 fixed w-full box-border p-1">
+    <div className=" bg-blue-400 fixed w-full content-center box-border p-1">
       <div className=" container mx-auto flex justify-between items-center uppercase relative">
         <Logo address="/" />
         <div className="flex gap-3 text-white">
-          <motion.div
+          <motion.ul
             variants={opacity}
             animate={!isActive ? "open" : "closed"}
             className="flex  items-center gap-3"
@@ -50,15 +50,17 @@ export default function Header() {
             <MenuItem title="I`m New" address="/im-new">
               I`m New
             </MenuItem>
-          </motion.div>
+          </motion.ul>
           <div
             onClick={() => {
               setIsActive(!isActive);
             }}
-            className={styles.el}
+            // className={styles.el}
+            className="flex items-center justify-center gap-2 cursor-pointer"
           >
             <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
-            <div className={styles.label}>
+            {/* <div className={styles.label}> */}
+            <div className="relative flex content-center h-full [&>*:nth-child(even)]:opacity-0 [&>*:nth-child(even)]:absolute">
               <motion.p variants={opacity} animate={!isActive ? "open" : "closed"}>
                 Menu
               </motion.p>

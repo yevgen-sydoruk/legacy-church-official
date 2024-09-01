@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import LogoImage from "../../assets/main-full-Logo.png";
+import LogoImage from "../../assets/main-Logo.png";
 
 export default function Logo({ address }) {
   return (
@@ -9,8 +9,8 @@ export default function Logo({ address }) {
       <Image
         className="object-fill"
         src={LogoImage}
-        width={300}
-        height={300}
+        width={83}
+        height={83}
         alt="Main Legacy Church Logo"
       />
     </Link>

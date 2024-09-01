@@ -26,28 +26,28 @@ export const height = {
 
 const links = [
   {
-    title: "Home",
+    title: "About",
     href: "/",
     src: "home.png"
   },
   {
-    title: "Shop",
-    href: "/shop",
+    title: "Get Involved",
+    href: "/",
     src: "shop.png"
   },
   {
-    title: "About Us",
-    href: "/about",
+    title: "Watch",
+    href: "/",
     src: "home.png"
   },
   {
-    title: "Lookbook",
-    href: "/lookbook",
+    title: "Give",
+    href: "/",
     src: "lookbook.png"
   },
   {
-    title: "Contact",
-    href: "/contact",
+    title: "I`m New",
+    href: "/",
     src: "contact.png"
   }
 ];
