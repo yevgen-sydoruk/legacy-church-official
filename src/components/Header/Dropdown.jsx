@@ -1,28 +1,40 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
+// import downChevron from "../../../assets/8541627_chevron_down_icon.svg";
+import upChevron from "../../../assets/8541710_chevron_up_icon.svg";
 
 export default function Dropdown({ title, linksList }) {
-  // console.log(links);
+  const [open, setOpen] = useState(false);
+  const toggleOpen = state => {
+    setOpen(state);
+  };
   return (
-    <div className="flex justify-center">
-      <FlyoutLink links={linksList}>{title}</FlyoutLink>
+    <div>
+      <FlyoutLink links={linksList} open={open} toggleOpen={toggleOpen}>
+        {title}{" "}
+        <Image
+          // src={open ? upChevron : downChevron}
+          src={upChevron}
+          alt="checkbox"
+          className={`w-3 h-3 fill-white ease-in duration-100 ${open ? "rotate-180" : ""}`}
+        />
+      </FlyoutLink>
     </div>
   );
 }
 
-const FlyoutLink = ({ children, links }) => {
-  const [open, setOpen] = useState(false);
-
+const FlyoutLink = ({ children, links, open, toggleOpen }) => {
   const showFlyout = links && open;
 
   return (
     <div
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => setOpen(false)}
+      onMouseEnter={() => toggleOpen(true)}
+      onMouseLeave={() => toggleOpen(false)}
       className="relative w-fit h-fit"
     >
-      <p className="relative text-white hover:text-[#3498db]">
+      <p className="relative flex  items-center gap-1 text-white hover:text-[#3498db]">
         {children}
         {/* <span
           style={{
@@ -57,7 +69,6 @@ const FlyoutLink = ({ children, links }) => {
                 </>
               );
             })}
-            {/* </div> */}
           </motion.div>
         )}
       </AnimatePresence>

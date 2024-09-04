@@ -95,12 +95,17 @@ export default function Header() {
     >
       <div className=" container relative flex mx-auto justify-between items-center p-5">
         <Logo address="/" />
-        <nav className="flex gap-3 text-white">
+        <nav className="flex gap-4 text-white">
           <motion.ul
             variants={opacity}
             animate={!isActive ? "open" : "closed"}
-            className="flex  items-center gap-3"
+            className="hidden md:flex items-center gap-4 uppercase"
           >
+            <li>
+              <Link className="hover:text-[#3498db]" href="/">
+                Home
+              </Link>
+            </li>
             <li>
               <Dropdown linksList={aboutLinks} title="About" />
             </li>
