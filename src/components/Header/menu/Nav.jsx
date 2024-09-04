@@ -3,10 +3,10 @@ import styles from "./style.module.css";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Body from "./Body";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 // import Image from "./Image";
 
-const transition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
+const transition = { duration: 0.5, ease: [0.76, 0, 0.24, 1] };
 
 export const height = {
   initial: {
@@ -24,36 +24,36 @@ export const height = {
   }
 };
 
-const links = [
-  {
-    title: "About",
-    href: "/",
-    src: "home.png"
-  },
-  {
-    title: "Get Involved",
-    href: "/",
-    src: "shop.png"
-  },
-  {
-    title: "Watch",
-    href: "/",
-    src: "home.png"
-  },
-  {
-    title: "Give",
-    href: "/",
-    src: "lookbook.png"
-  },
-  {
-    title: "I`m New",
-    href: "/",
-    src: "contact.png"
-  }
-];
+// const links = [
+//   {
+//     title: "About",
+//     href: "/",
+//     src: "home.png"
+//   },
+//   {
+//     title: "Get Involved",
+//     href: "/",
+//     src: "shop.png"
+//   },
+//   {
+//     title: "Watch",
+//     href: "/",
+//     src: "home.png"
+//   },
+//   {
+//     title: "Give",
+//     href: "/",
+//     src: "lookbook.png"
+//   },
+//   {
+//     title: "I`m New",
+//     href: "/",
+//     src: "contact.png"
+//   }
+// ];
 
 export default function Index() {
-  const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 });
+  // const [selectedLink, setSelectedLink] = useState({ isActive: false, index: 0 });
 
   return (
     <motion.div
@@ -65,7 +65,8 @@ export default function Index() {
     >
       <div className={styles.wrapper}>
         <div className={styles.container}>
-          <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink} />
+          {/* <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink} /> */}
+          <Body />
           {/* <Footer /> */}
         </div>
         {/* <Image src={links[selectedLink.index].src} selectedLink={selectedLink} /> */}

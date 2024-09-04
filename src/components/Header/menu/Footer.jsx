@@ -1,5 +1,5 @@
 import styles from "./style.module.css";
-import { translate } from "../../anim";
+// import { translate } from "../../anim";
 import { motion } from "framer-motion";
 
 export const translate = {
@@ -23,7 +23,8 @@ export const translate = {
 
 export default function Footer() {
   return (
-    <div className={styles.footer}>
+    // <div className={styles.footer}>
+    <div className="container lg:ml-4 md:ml-2 flex items-end flex-wrap uppercase mt-10">
       <ul>
         <motion.li
           custom={[0.3, 0]}
