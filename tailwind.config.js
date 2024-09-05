@@ -9,7 +9,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))"
+        "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        hero2:
+          "url('https://storage2.snappages.site/X2WRGF/assets/images/16694452_3072x4608_2500.jpg')",
+        "hero-image": "url('/Legacy-hero.jpg')"
       }
     }
   },

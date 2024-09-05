@@ -9,16 +9,16 @@ const transition = { duration: 0.5, ease: [0.76, 0, 0.24, 1] };
 
 export const height = {
   initial: {
-    height: 0
+    height: 0,
+    overflow: "hidden" // Prevent content overflow when hidden
   },
-
   enter: {
     height: "auto",
     transition
   },
-
   exit: {
     height: 0,
+    overflow: "hidden", // Prevent overflow on exit
     transition
   }
 };
@@ -30,9 +30,9 @@ export default function Index() {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="overflow-hidden "
+      className="overflow-hidden h-full"
     >
-      <div className="container mx-auto p-5">
+      <div className="container mx-auto p-5 h-full">
         {/* <nav className="grid grid-rows-2 w-full gap-4 uppercase text-base lg:justify-normal justify-between"> */}
         <nav className="grid grid-rows-3 grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-4 uppercase text-base ">
           {/* <nav className="grid grid-rows-3 grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-4 uppercase text-base lg:justify-normal justify-between"> */}

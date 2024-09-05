@@ -32,13 +32,10 @@ export const background = {
 
   open: {
     height: "100vh",
-
     transition
   },
-
   closed: {
     height: 0,
-
     transition
   }
 };
@@ -47,11 +44,8 @@ export default function Header() {
   const [isActive, setIsActive] = useState(true);
 
   return (
-    <header
-      className="  fixed w-full content-center box-border bg-zinc-400
-    "
-    >
-      <div className=" container relative flex mx-auto justify-between items-center p-5">
+    <header className="  fixed w-full content-center box-border bg-zinc-400">
+      <div className=" container relative flex mx-auto justify-between items-center p-5 ">
         <Logo address="/" />
         <nav className="flex gap-4 text-white">
           <motion.ul

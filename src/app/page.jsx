@@ -1,3 +1,4 @@
+import Hero from "@/components/Hero/Hero";
 import React from "react";
 
 export const metadata = {
@@ -6,5 +7,9 @@ export const metadata = {
 };
 
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div className="h-[1000px] pt-[97px]">
+      <Hero />
+    </div>
+  );
 }
