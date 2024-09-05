@@ -34,7 +34,8 @@ export default function Index() {
     >
       <div className="container mx-auto p-5">
         {/* <nav className="grid grid-rows-2 w-full gap-4 uppercase text-base lg:justify-normal justify-between"> */}
-        <nav className="grid grid-rows-3 grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-4 uppercase text-base lg:justify-normal justify-between">
+        <nav className="grid grid-rows-3 grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-4 uppercase text-base ">
+          {/* <nav className="grid grid-rows-3 grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-4 uppercase text-base lg:justify-normal justify-between"> */}
           <div className="row-span-2 md:order-1 order-1">
             <h3 className="mb-4 text-2xl">About</h3>
             <ul className="flex flex-col gap-2">
@@ -130,7 +131,7 @@ export default function Index() {
           </div>
           <div className="row-span-1 md:order-6 order-6">
             <h3 className="mb-5 text-2xl">Download Legacy App</h3>
-            <ul className="flex justify-start content-start align-top gap-1">
+            <ul className="flex flex-col lg:flex-row gap-3">
               <li>
                 <Link
                   className="hover:text-[#3498db]"
