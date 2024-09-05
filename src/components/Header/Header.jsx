@@ -4,9 +4,12 @@ import Link from "next/link";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Logo from "../Logo";
-import Nav from "./menu/Nav";
+import Nav from "./secondaryNav/Nav";
 import { Squash as Hamburger } from "hamburger-react";
 import Dropdown from "./Dropdown";
+import { aboutLinks, connectLinks, ImNewLinks } from "./lists";
+
+const transition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
 
 export const opacity = {
   initial: {
@@ -22,71 +25,26 @@ export const opacity = {
   }
 };
 
-const aboutLinks = [
-  {
-    title: "Mission & Vision",
-    href: "/mission-and-vision"
+export const background = {
+  initial: {
+    height: 0
   },
 
-  {
-    title: "What We Believe",
-    href: "/what-we-believe"
+  open: {
+    height: "100vh",
+
+    transition
   },
 
-  {
-    title: "Our Story",
-    href: "/our-story"
-  },
+  closed: {
+    height: 0,
 
-  {
-    title: "Leadership",
-    href: "/leadership"
+    transition
   }
-];
-
-const connectLinks = [
-  {
-    title: "Legacy youth",
-    href: "/legacy-youth"
-  },
-
-  {
-    title: "Lil’ legacy",
-    href: "/lil-legacy"
-  },
-
-  {
-    title: "Join a life group",
-    href: "/join-a-life-group"
-  },
-
-  {
-    title: "Volunteer",
-    href: "/Volunteer"
-  },
-  {
-    title: "Prayer Request",
-    href: "/prayer-request"
-  },
-  {
-    title: "Legacy Cafe",
-    href: "/legacy-cafe"
-  }
-];
-const ImNewLinks = [
-  {
-    title: "Connect Card",
-    href: "/connect-card"
-  },
-
-  {
-    title: "Baptism Sign-Up",
-    href: "/baptism-signup"
-  }
-];
+};
 
 export default function Header() {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
 
   return (
     <header
@@ -99,7 +57,7 @@ export default function Header() {
           <motion.ul
             variants={opacity}
             animate={!isActive ? "open" : "closed"}
-            className="hidden md:flex items-center gap-4 uppercase"
+            className={isActive ? "hidden" : "hidden md:flex items-center gap-4 uppercase"}
           >
             <li>
               <Link className="hover:text-[#3498db]" href="/">
@@ -130,6 +88,12 @@ export default function Header() {
           <Hamburger color="#3498db" toggled={isActive} toggle={setIsActive} />
         </nav>
       </div>
+      <motion.div
+        variants={background}
+        initial="initial"
+        animate={isActive ? "open" : "closed"}
+        className="bg-black opacity-50 h-full w-full absolute left-0 top-full"
+      ></motion.div>
       <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
     </header>
   );

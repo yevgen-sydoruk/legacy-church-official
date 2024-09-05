@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-// import downChevron from "../../../assets/8541627_chevron_down_icon.svg";
-import upChevron from "../../../assets/8541710_chevron_up_icon.svg";
+import upChevron from "../../../assets/8541627_chevron_down_icon.svg";
 
 export default function Dropdown({ title, linksList }) {
   const [open, setOpen] = useState(false);
@@ -15,7 +14,6 @@ export default function Dropdown({ title, linksList }) {
       <FlyoutLink links={linksList} open={open} toggleOpen={toggleOpen}>
         {title}{" "}
         <Image
-          // src={open ? upChevron : downChevron}
           src={upChevron}
           alt="checkbox"
           className={`w-3 h-3 fill-white ease-in duration-100 ${open ? "rotate-180" : ""}`}
@@ -36,12 +34,6 @@ const FlyoutLink = ({ children, links, open, toggleOpen }) => {
     >
       <p className="relative flex  items-center gap-1 text-white hover:text-[#3498db]">
         {children}
-        {/* <span
-          style={{
-            transform: showFlyout ? "scaleX(1)" : "scaleX(0)"
-          }}
-          className="absolute -bottom-2 -left-2 -right-2 h-1 origin-left scale-x-0 rounded-full bg-indigo-300 transition-transform duration-300 ease-out"
-        /> */}
       </p>
       <AnimatePresence>
         {showFlyout && (
