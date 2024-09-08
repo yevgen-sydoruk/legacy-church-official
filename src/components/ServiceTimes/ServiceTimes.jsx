@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function ServiceTimes() {
   return (
-    <div className="bg-[#3498db] lg:flex justify-center   text-white">
+    <section className="bg-[#3498db] lg:flex justify-center text-white">
       <div className="lg:w-1/2 text-center lg:text-left w-full flex flex-col gap-5 p-10">
         <h2 className="text-6xl text-center">Service Times</h2>
         <div className="">
@@ -35,7 +35,7 @@ export default function ServiceTimes() {
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
-    </div>
+    </section>
   );
 }
 

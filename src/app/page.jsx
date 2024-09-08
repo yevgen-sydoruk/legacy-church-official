@@ -1,5 +1,7 @@
+import CafeBlock from "@/components/CafeBlock/CafeBlock";
 import Hero from "@/components/Hero/Hero";
 import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
+import Footer from "@/components/Footer/Footer";
 import Welcome from "@/components/Welcome/Welcome";
 import React from "react";
 
@@ -14,6 +16,8 @@ export default function Home() {
       <Hero />
       <Welcome />
       <ServiceTimes />
+      <CafeBlock />
+      <Footer />
     </div>
   );
 }

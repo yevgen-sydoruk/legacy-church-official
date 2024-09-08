@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Welcome() {
   return (
-    <div className="container mx-auto flex flex-col justify-center items-center pb-28 pt-28 gap-10">
+    <section className="container mx-auto flex flex-col justify-center items-center pb-28 pt-28 gap-10">
       <h2 className="text-[5.6rem]">Welcome</h2>
       <p className="max-w-3xl text-center">
         Legacy Church is a place where people can meet Jesus and engage in life-giving community
@@ -17,6 +17,6 @@ export default function Welcome() {
       >
         Learn more
       </Link>
-    </div>
+    </section>
   );
 }
