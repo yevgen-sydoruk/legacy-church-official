@@ -41,11 +41,12 @@ export const background = {
 };
 
 export default function Header() {
-  const [isActive, setIsActive] = useState(true);
+  const [isActive, setIsActive] = useState(false);
 
   return (
-    <header className="  fixed w-full content-center box-border bg-zinc-400">
-      <div className=" container relative flex mx-auto justify-between items-center p-5 ">
+    // bg-zinc-400
+    <header className="fixed w-full bg-hero-gradient content-center box-border z-50">
+      <div className="container relative flex mx-auto justify-between items-center p-5 ">
         <Logo address="/" />
         <nav className="flex gap-4 text-white">
           <motion.ul
@@ -79,7 +80,7 @@ export default function Header() {
               <Dropdown linksList={ImNewLinks} title="I`m New" />
             </li>
           </motion.ul>
-          <Hamburger color="#3498db" toggled={isActive} toggle={setIsActive} />
+          <Hamburger color="white" toggled={isActive} toggle={setIsActive} />
         </nav>
       </div>
       <motion.div

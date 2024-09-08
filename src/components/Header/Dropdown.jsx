@@ -15,8 +15,8 @@ export default function Dropdown({ title, linksList }) {
         {title}{" "}
         <Image
           src={upChevron}
-          alt="checkbox"
-          className={`w-3 h-3 fill-white ease-in duration-100 ${open ? "rotate-180" : ""}`}
+          alt="chevron"
+          className={`w-3 h-3 ease-in duration-100 ${open ? "rotate-180" : ""}`}
         />
       </FlyoutLink>
     </div>

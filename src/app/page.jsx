@@ -1,4 +1,6 @@
 import Hero from "@/components/Hero/Hero";
+import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
+import Welcome from "@/components/Welcome/Welcome";
 import React from "react";
 
 export const metadata = {
@@ -8,8 +10,10 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <div className="h-[1000px] pt-[97px]">
+    <div className="">
       <Hero />
+      <Welcome />
+      <ServiceTimes />
     </div>
   );
 }

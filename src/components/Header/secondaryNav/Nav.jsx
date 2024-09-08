@@ -9,16 +9,16 @@ const transition = { duration: 0.5, ease: [0.76, 0, 0.24, 1] };
 
 export const height = {
   initial: {
-    height: 0,
-    overflow: "hidden" // Prevent content overflow when hidden
+    height: 0
   },
+
   enter: {
     height: "auto",
     transition
   },
+
   exit: {
     height: 0,
-    overflow: "hidden", // Prevent overflow on exit
     transition
   }
 };
@@ -140,8 +140,7 @@ export default function Index() {
                   <Image
                     src={androidLogo}
                     width={200}
-                    height={200}
-                    quality={10}
+                    height={60}
                     sizes="(max-width: 768px) 100vw, 33vw"
                     alt="Legacy Church App download link for Android"
                   />
@@ -155,7 +154,7 @@ export default function Index() {
                   <Image
                     src={appleLogo}
                     width={200}
-                    height={200}
+                    height={60}
                     alt="Legacy Church App download link for Apple"
                   />
                 </Link>
