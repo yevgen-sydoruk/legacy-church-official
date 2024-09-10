@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer cpmponents {
+  .h1-size {
+    @apply text-xl;
+  }
+}
+/* font-family: "Lato",Arial,"Helvetica Neue",Helvetica,sans-serif; */
