@@ -30,7 +30,7 @@ export default function Index() {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="overflow-hidden h-full"
+      className="overflow-hidden h-full bg-black text-white"
     >
       <div className="container mx-auto p-5 h-full">
         {/* <nav className="grid grid-rows-2 w-full gap-4 uppercase text-base lg:justify-normal justify-between"> */}

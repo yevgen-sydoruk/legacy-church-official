@@ -32,9 +32,7 @@ const FlyoutLink = ({ children, links, open, toggleOpen }) => {
       onMouseLeave={() => toggleOpen(false)}
       className="relative w-fit h-fit"
     >
-      <p className="relative flex  items-center gap-1 text-white hover:text-[#3498db]">
-        {children}
-      </p>
+      <p className="relative flex  items-center gap-1 hover:text-[#3498db]">{children}</p>
       <AnimatePresence>
         {showFlyout && (
           <motion.div

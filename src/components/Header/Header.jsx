@@ -9,7 +9,19 @@ import { Squash as Hamburger } from "hamburger-react";
 import Dropdown from "./Dropdown";
 import { aboutLinks, connectLinks, ImNewLinks } from "./lists";
 
-const transition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
+// const transition = { duration: 1, ease: [0.76, 0, 0.24, 1] };
+
+document.addEventListener("scroll", () => {
+  const header = document.querySelector("header");
+
+  setTimeout(() => {
+    header.firstElementChild.classList.toggle("p-5", window.scrollY <= 910);
+    header.firstElementChild.classList.toggle("p-1", window.scrollY > 910);
+    header.classList.toggle("bg-[#3498db]", window.scrollY > 910);
+    header.classList.toggle("bg-hero-gradient", window.scrollY <= 910);
+    // header.classList.toggle("bg-transparent", window.scrollY <= 910);
+  }, 100);
+});
 
 export const opacity = {
   initial: {
@@ -32,11 +44,11 @@ export const background = {
 
   open: {
     height: "100vh",
-    transition
+    transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
   },
   closed: {
     height: 0,
-    transition
+    transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
   }
 };
 
@@ -44,11 +56,14 @@ export default function Header() {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    // bg-zinc-400
-    <header className="fixed w-full bg-hero-gradient content-center box-border z-50">
-      <div className="container relative flex mx-auto justify-between items-center p-5 ">
+    <header
+      className={`fixed w-full content-center box-border z-50 transition-all duration-500 ${
+        isActive ? "bg-black " : "bg-hero-gradient"
+      } `}
+    >
+      <div className="container relative flex mx-auto justify-between items-center p-5">
         <Logo address="/" />
-        <nav className="flex gap-4 text-white">
+        <nav className={"flex gap-4 text-white"}>
           <motion.ul
             variants={opacity}
             animate={!isActive ? "open" : "closed"}
