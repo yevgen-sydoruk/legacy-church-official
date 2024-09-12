@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @layer cpmponents {
-  .h1-size {
-    @apply text-xl;
+  .link-decoration-underline {
+    @apply underline underline-offset-2 hover:underline-offset-4 transition-all !important;
   }
 }
 /* font-family: "Lato",Arial,"Helvetica Neue",Helvetica,sans-serif; */

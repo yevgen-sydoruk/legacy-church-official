@@ -3,8 +3,8 @@ import Link from "next/link";
 
 export default function Welcome() {
   return (
-    <section className="container mx-auto flex flex-col justify-center items-center pb-28 pt-28 gap-10">
-      <h2 className="text-[5.6rem]">Welcome</h2>
+    <section className="container mx-auto flex flex-col justify-center items-center py-28 px-10 gap-10">
+      <h2 className="sm:text-6xl text-4xl">Welcome</h2>
       <p className="max-w-3xl text-center">
         Legacy Church is a place where people can meet Jesus and engage in life-giving community
         that is made up of people from all walks of life. We believe in creating a space where

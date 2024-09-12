@@ -14,6 +14,9 @@ module.exports = {
         "hero-image": "url('/legacy-hero.jpg')",
         "cafe-block-image": "url('/legacy-cafe.jpg')",
         "black-overlay": "linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.8))"
+      },
+      boxShadow: {
+        "nav-shadow": "0 6px 8px -1px rgba(0,0,0,0.3)"
       }
     }
   },
