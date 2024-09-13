@@ -36,7 +36,7 @@ export default function CafeBlock() {
             MOBILE ORDER AVAILABLE.
           </p>
           <Link
-            className="text-start rounded-md border border-[#3498db] py-2 px-4  text-2xl transition-all shadow-sm hover:shadow-lg text-white hover:text-white hover:bg-[#3498db] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none uppercase"
+            className="py-2 px-4 border border-[#3498db] rounded-md text-2xl text-white text-center transition-all shadow-sm hover:shadow-lg  hover:text-white hover:bg-[#3498db] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase"
             href="#"
           >
             Learn more about cafe
