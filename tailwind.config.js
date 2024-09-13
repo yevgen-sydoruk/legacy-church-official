@@ -13,6 +13,7 @@ module.exports = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "hero-image": "url('/legacy-hero.jpg')",
         "cafe-block-image": "url('/legacy-cafe.jpg')",
+        "Ukraine-block-image": "url('/legacy-Ukraine.png')",
         "black-overlay": "linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.8))"
       },
       boxShadow: {

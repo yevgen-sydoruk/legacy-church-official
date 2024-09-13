@@ -5,6 +5,7 @@ import Footer from "@/components/Footer/Footer";
 import Welcome from "@/components/Welcome/Welcome";
 import React from "react";
 import MiraclesChallenge from "@/components/MiraclesChallenge/MiraclesChallenge";
+import UkraineRelief from "@/components/UkraineRelief/UkraineRelief";
 
 export const metadata = {
   title: "Legacy Church - MA - Home",
@@ -18,6 +19,7 @@ export default function Home() {
       <Welcome />
       <MiraclesChallenge />
       <ServiceTimes />
+      <UkraineRelief />
       <CafeBlock />
       <Footer />
     </div>
