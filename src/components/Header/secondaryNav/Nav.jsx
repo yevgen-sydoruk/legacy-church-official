@@ -30,9 +30,9 @@ export default function Index() {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="overflow-hidden h-full bg-black text-white"
+      className="overflow-hidden h-full text-white"
     >
-      <div className="container mx-auto p-5 h-full">
+      <div className="container mx-auto py-5 h-full">
         <nav className="grid grid-rows-3 grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-4 uppercase text-base ">
           <div className="row-span-2 md:order-1 order-1">
             <h3 className="mb-4 text-2xl">About</h3>
@@ -160,7 +160,6 @@ export default function Index() {
             </ul>
           </div>
         </nav>
-        {/* <Footer /> */}
       </div>
     </motion.div>
   );

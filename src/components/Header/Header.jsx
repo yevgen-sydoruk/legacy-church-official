@@ -33,40 +33,54 @@ export const background = {
 
   open: {
     height: "100vh",
-    transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
+    transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] }
   },
   closed: {
     height: 0,
-    transition: { duration: 1, ease: [0.76, 0, 0.24, 1] }
+    transition: { duration: 0.6, ease: [0.76, 0, 0.24, 1] }
   }
 };
 
-export default function Header() {
+export default function Header({ isHome }) {
   const [isActive, setIsActive] = useState(false);
 
   useEffect(() => {
+    const header = document.querySelector("header");
     const handleScroll = () => {
-      const header = document.querySelector("header");
+      if (!header || !header.firstElementChild) return;
+
       setTimeout(() => {
-        if (header && header.firstElementChild) {
-          header.lastElementChild.classList.toggle("py-2", window.scrollY > 910);
-          header.firstElementChild.classList.toggle("hidden", window.scrollY > 910);
-          header.classList.toggle("bg-[#3498db]", window.scrollY > 910);
-          header.classList.toggle("shadow-[0_6px_8px_-1px_rgba(0,0,0,0.3)]", window.scrollY > 910);
-          header.classList.toggle("bg-hero-gradient", window.scrollY <= 910);
+        if (isHome) {
+          // Home page scroll behavior
+          const isScrolled = window.scrollY > 910;
+          header.firstElementChild.classList.toggle("hidden", isScrolled);
+          header.classList.toggle("bg-[#3498db]", isScrolled);
+          header.classList.toggle("shadow-[0_6px_8px_-1px_rgba(0,0,0,0.3)]", isScrolled);
+          header.classList.toggle("bg-hero-gradient", !isScrolled);
+        } else {
+          // Non-home page scroll behavior
+          const isScrolled = window.scrollY > 150;
+          header.firstElementChild.classList.toggle("hidden", isScrolled);
         }
       }, 100);
     };
+
     document.addEventListener("scroll", handleScroll);
+
+    // Clean up event listener on unmount
     return () => {
-      document.removeEventListener("scroll", handleScroll); // Clean up event listener on unmount
+      document.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isHome]);
 
   return (
     <header
-      className={`fixed w-full content-center box-border z-50 transition-all duration-500 ${
-        isActive ? "bg-black" : "bg-hero-gradient"
+      className={`fixed w-full content-center box-border z-50 ${
+        isActive
+          ? "bg-black"
+          : isHome
+          ? "bg-hero-gradient transition-all duration-500"
+          : "bg-[#3498db]"
       } `}
     >
       <ul className="flex items-center gap-2 p-3 justify-center md:justify-end">
@@ -87,7 +101,7 @@ export default function Header() {
         </li>
       </ul>
 
-      <div className="px-10">
+      <div className="px-10 py-2">
         <div className="container relative flex mx-auto justify-between items-center">
           <Logo address="/" />
           <nav className={"flex gap-4 text-white"}>
@@ -129,7 +143,7 @@ export default function Header() {
           variants={background}
           initial="initial"
           animate={isActive ? "open" : "closed"}
-          className="bg-black opacity-50 h-full w-full absolute left-0 top-full"
+          className="bg-black opacity-50 h-full w-full absolute left-0 top-0 -z-10"
         ></motion.div>
         <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
       </div>

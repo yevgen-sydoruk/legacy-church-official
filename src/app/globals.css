@@ -2,8 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.link-dark-on-image-bg {
-  @apply rounded-md border border-[#3498db] bg-[#10364f] py-2 px-4 text-center text-2xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#3498db] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none uppercase;
+@layer components {
+  .link-dark-on-image-bg {
+    @apply rounded-md border border-[#3498db] bg-[#10364f] py-2 px-4 text-center text-2xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#3498db] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none uppercase;
+  }
+  .link-decoration-underline {
+    @apply underline underline-offset-2 hover:underline-offset-4 transition-all !important;
+  }
 }
-
 /* font-family: "Lato",Arial,"Helvetica Neue",Helvetica,sans-serif; */

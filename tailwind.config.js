@@ -14,6 +14,7 @@ module.exports = {
         "hero-image": "url('/legacy-hero.jpg')",
         "cafe-block-image": "url('/legacy-cafe.jpg')",
         "Ukraine-block-image": "url('/legacy-Ukraine.png')",
+        "mission-banner": "url('/mission_and_vision_banner.jpg')",
         "black-overlay": "linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 0%, rgba(0, 0, 0, 0.8))"
       },
       boxShadow: {

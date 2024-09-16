@@ -1,7 +1,7 @@
 export const aboutLinks = [
   {
     title: "Mission & Vision",
-    href: "/mission-and-vision"
+    href: "/mission"
   },
 
   {

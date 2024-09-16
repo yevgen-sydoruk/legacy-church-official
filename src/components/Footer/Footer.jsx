@@ -10,7 +10,7 @@ import FacebookIcon from "../../../assets/icons/FacebookIcon.jsx";
 export default function Footer() {
   return (
     // <section className="container mx-auto flex justify-center text-center py-28 px-5 xl:gap-56 lg:gap-36 md:gap-22 sm:gap-7">
-    <section className="bg-[#3498db] py-10 px-5">
+    <footer className="bg-[#3498db] py-10 px-5">
       <div className="container mx-auto grid md:grid-cols-4 grid-cols-2 gap-5 text-white text-center">
         <div className="flex flex-col items-center gap-3">
           <h3 className="text-2xl">About</h3>
@@ -116,6 +116,6 @@ export default function Footer() {
           </ul>
         </div>
       </div>
-    </section>
+    </footer>
   );
 }
