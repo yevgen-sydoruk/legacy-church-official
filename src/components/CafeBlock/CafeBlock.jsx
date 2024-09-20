@@ -15,20 +15,19 @@ export default function CafeBlock() {
             after service at our very own Legacy Cafe!
           </p>
           <p className="max-w-lg">
-            Download the{" "}
-            <snap>
-              <Link
-                className="text-[#3498db]"
-                href="https://apps.apple.com/us/app/legacy-church-official/id1622867116"
-              >
-                Legacy Church Official App for Apple,{" "}
-              </Link>
-            </snap>
+            Download the
+            <Link
+              className="text-[#3498db] link-decoration-underline"
+              href="https://apps.apple.com/us/app/legacy-church-official/id1622867116"
+            >
+              {" "}
+              Legacy Church Official App for Apple,{" "}
+            </Link>
             <br></br>
             or
             <br></br>
             <Link
-              className="text-[#3498db]"
+              className="text-[#3498db] link-decoration-underline"
               href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_X2WRGF&hl=en_US"
             >
               Legacy Church Official App for Android,<br></br>{" "}

@@ -8,10 +8,22 @@ export default function Logo({ address }) {
   return (
     <Link href={address}>
       <div className="hidden md:block ">
-        <Image src={LogoFullImage} width={300} height={300} alt="Main Legacy Church Logo" />
+        <Image
+          src={LogoFullImage}
+          width={300}
+          height={60}
+          alt="Main Legacy Church Logo"
+          style={{ height: 60, width: 300 }}
+        />
       </div>
       <div className="md:hidden">
-        <Image src={LogoImage} width={60} height={60} alt="Main Legacy Church Logo" />
+        <Image
+          src={LogoImage}
+          width={60}
+          height={60}
+          alt="Main Legacy Church Logo"
+          style={{ height: 60, width: 60 }}
+        />
       </div>
     </Link>
   );

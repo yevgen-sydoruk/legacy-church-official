@@ -2,7 +2,6 @@
 
 import React, { useRef, useState } from "react";
 import Link from "next/link";
-// import "./styles.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";

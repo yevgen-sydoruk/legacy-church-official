@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function WatchService() {
   return (
-    <section className="py-20 px-10 inset-0 bg-black/20">
+    <section className="py-20 px-10 inset-0 bg-black/20" id="watchService">
       <div className="container mx-auto flex flex-col justify-center items-center gap-10">
         <h2 className="sm:text-6xl text-4xl">Watch Sunday Service Live</h2>
         <p className="max-w-3xl text-center">Can't make our service? Want to watch from home?</p>
