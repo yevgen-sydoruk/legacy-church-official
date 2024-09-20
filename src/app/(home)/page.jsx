@@ -6,6 +6,7 @@ import Welcome from "@/components/Welcome/Welcome";
 import MiraclesChallenge from "@/components/MiraclesChallenge/MiraclesChallenge";
 import UkraineRelief from "@/components/UkraineRelief/UkraineRelief";
 import WatchService from "@/components/WatchService/WatchService";
+import { ContactForm } from "@/components/ContactForm/ContactForm";
 
 export const metadata = {
   title: "Legacy Church - MA - Home",
@@ -22,6 +23,7 @@ export default function Home() {
       <WatchService />
       <UkraineRelief />
       <CafeBlock />
+      <ContactForm />
     </main>
   );
 }
