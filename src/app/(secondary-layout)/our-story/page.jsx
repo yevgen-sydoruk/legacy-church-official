@@ -1,5 +1,4 @@
 import Banner from "@/components/Banner/Banner";
-import { ContactForm } from "@/components/ContactForm/ContactForm";
 import React from "react";
 import bannerImage from "../../../../public/our_story_banner.jpg";
 import ourStoryPhoto1 from "../../../../public/our_story_photo1.png";
