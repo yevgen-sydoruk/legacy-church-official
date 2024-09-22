@@ -23,7 +23,11 @@ export default function Home() {
       <WatchService />
       <UkraineRelief />
       <CafeBlock />
-      <ContactForm />
+      <ContactForm
+        title={"Get In Touch"}
+        text={"We'd love to hear from you! Fill out the form below to get started."}
+        sentFromPage={"Main Page"}
+      />
     </main>
   );
 }

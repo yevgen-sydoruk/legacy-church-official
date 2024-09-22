@@ -29,11 +29,12 @@ export async function POST(req) {
     });
 
     const mailData = {
-      from: process.env.SMTP_USER,
+      // from: "Legacy web page " + process.env.SMTP_USER,
+      from: "Legacy Web Page",
       to: "drevilemailtest@gmail.com", //send to church email
       //   bcc: "usmanasifdev@gmail.com",
       replyTo: body.email,
-      subject: `New Contact Message from the Main Page`,
+      subject: `New Message from Legacy Web Page`,
       html: `
         <div><strong>First Name:</strong> ${body.firstName}</div>
         <br/>
@@ -43,7 +44,7 @@ export async function POST(req) {
         <br/>
         <div><strong>Message:</strong> ${body.message}</div>
         <br/>
-        <div>This Email was sent from a contact form on the Main Page</div>`
+        <div>This Email was sent from a contact form on the ${body.sentFromPage} Page.</div>`
     };
 
     await new Promise((resolve, reject) => {

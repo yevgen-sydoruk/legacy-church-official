@@ -6,13 +6,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import clsx from "clsx";
 
-export function ContactForm() {
+export function ContactForm({ title, text, sentFromPage }) {
   const [isLoading, setIsLoading] = useState(false);
   const {
     control,
     register,
     handleSubmit,
-    watch,
     setValue,
     reset,
     formState: { errors }
@@ -21,14 +20,17 @@ export function ContactForm() {
   });
   const onSubmit = async data => {
     setIsLoading(true);
-    fetch("/api", {
+
+    const payload = { ...data, sentFromPage };
+
+    fetch("/api/sendEmail", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
         "Content-Type": "application/json",
         Authorization: "Q4n2ql2nqnZVlRlqwv"
       },
-      body: JSON.stringify(data)
+      body: JSON.stringify(payload)
     })
       .then(res => {
         setIsLoading(false);
@@ -67,65 +69,57 @@ export function ContactForm() {
           />
         </div> */}
       {/* <section className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32"> */}
-      <section className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto max-w-3xl">
-        <div className="px-6 lg:px-8 items-center justify-center content-center">
+      <section className="pb-24 pt-16 sm:pb-32 sm:pt-24  bg-[#ecf0f1]">
+        <div className="max-w-3xl mx-auto  px-6 lg:px-8 items-center justify-center content-center">
           <div className="mx-auto max-w-5xl lg:max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900">Get In Touch</h2>
-            <p className="mt-2 text-lg leading-8 text-gray-600">
-              We'd love to hear from you! Fill out the form below to get started.
-            </p>
+            <h2 className="sm:text-6xl text-4xl font-light tracking-tight">{title}</h2>
+            <p className="mt-5 text-lg font-bold">{text}</p>
           </div>
           <form onSubmit={handleSubmit(onSubmit)} className="mt-16">
             <div className="flex flex-col gap-2">
               <div className="flex gap-2 w-full">
                 <div className="w-1/2">
                   <label htmlFor="firstName" className="block text-sm font-semibold text-gray-900">
-                    First name
+                    First Name
                   </label>
-                  <div className="mt-2.5">
-                    <input
-                      className="p-2 w-full border-2 focus-visible:border-[#3498db] rounded-lg bg-gray-200 outline-none"
-                      type="text"
-                      name="firstName"
-                      id="firstName"
-                      {...register("firstName", { required: true })}
-                    />
-                  </div>
+                  <input
+                    className="mt-2.5 p-2 w-full border-2 border-[#daddde] focus-visible:border-[#3498db] rounded-lg bg-[#daddde] outline-none"
+                    type="text"
+                    name="firstName"
+                    id="firstName"
+                    {...register("firstName", { required: true })}
+                  />
                 </div>
 
                 <div className="w-1/2">
                   <label htmlFor="lastName" className="block text-sm font-semibold text-gray-900">
-                    Last name
+                    Last Name
                   </label>
-                  <div className="mt-2.5">
-                    <input
-                      className="p-2 w-full border-2 focus-visible:border-[#3498db] rounded-lg bg-gray-200 outline-none"
-                      type="text"
-                      name="lastName"
-                      id="lastName"
-                      {...register("lastName", { required: true })}
-                    />
-                  </div>
+                  <input
+                    className="mt-2.5 p-2 w-full border-2 border-[#daddde] focus-visible:border-[#3498db] rounded-lg bg-[#daddde] outline-none"
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                    {...register("lastName", { required: true })}
+                  />
                 </div>
               </div>
-              <div className="sm:col-span-2">
+              <div className="">
                 <label
                   htmlFor="email"
                   className="block text-sm font-semibold leading-6 text-gray-900"
                 >
                   Email
                 </label>
-                <div className="mt-2.5">
-                  <input
-                    className="p-2 w-full border-2 focus-visible:border-[#3498db] rounded-lg bg-gray-200 outline-none"
-                    id="email"
-                    name="email"
-                    type="email"
-                    {...register("email", { required: true })}
-                  />
-                </div>
+                <input
+                  className="mt-2.5 p-2 w-full border-2 border-[#daddde] focus-visible:border-[#3498db] rounded-lg bg-[#daddde] outline-none"
+                  id="email"
+                  name="email"
+                  type="email"
+                  {...register("email", { required: true })}
+                />
               </div>
-              <div className="sm:col-span-2">
+              <div className="">
                 <div className="flex justify-between text-sm leading-6">
                   <label
                     htmlFor="message"
@@ -133,27 +127,23 @@ export function ContactForm() {
                   >
                     Message
                   </label>
-                  <p id="message-description" className="text-gray-400">
-                    Max 500 characters
-                  </p>
                 </div>
-                <div className="mt-2.5">
-                  <textarea
-                    className="p-2 w-full border-2 focus-visible:border-[#3498db] rounded-lg bg-gray-200 outline-none"
-                    id="message"
-                    name="message"
-                    rows={4}
-                    aria-describedby="message-description"
-                    {...register("message", { required: true })}
-                  />
-                </div>
+                <textarea
+                  className="mt-2.5 p-2 w-full border-2 border-[#daddde] focus-visible:border-[#3498db] rounded-lg bg-[#daddde] outline-none"
+                  id="message"
+                  name="message"
+                  rows={4}
+                  aria-describedby="message-description"
+                  {...register("message", { required: true })}
+                />
               </div>
             </div>
-            <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
+            <div className="mt-10 flex justify-end">
+              {/* <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8"> */}
               <button
                 type="submit"
                 className={clsx(
-                  "inline-flex justify-center items-center rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
+                  "inline-flex w-full justify-center items-center rounded-md bg-[#3498db] px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600",
                   isLoading && "cursor-not-allowed"
                 )}
               >
