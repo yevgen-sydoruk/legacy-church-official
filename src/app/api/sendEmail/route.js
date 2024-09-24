@@ -29,12 +29,14 @@ export async function POST(req) {
     });
 
     const mailData = {
-      // from: "Legacy web page " + process.env.SMTP_USER,
-      from: "Legacy Web Page",
-      to: "drevilemailtest@gmail.com", //send to church email
+      from: {
+        name: `Legacy Web Page`,
+        address: `${process.env.SMTP_USER}`
+      },
+      to: "drevil3372@gmail.com", //send to church email
       //   bcc: "usmanasifdev@gmail.com",
       replyTo: body.email,
-      subject: `New Message from Legacy Web Page`,
+      subject: `New Message from Legacy Web Page - ${body.sentFromPage}`,
       html: `
         <div><strong>First Name:</strong> ${body.firstName}</div>
         <br/>

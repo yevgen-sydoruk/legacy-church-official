@@ -44,6 +44,10 @@ export const background = {
 export default function Header({ isHome }) {
   const [isActive, setIsActive] = useState(false);
 
+  const handleLinkClick = () => {
+    setIsActive(false);
+  };
+
   useEffect(() => {
     const header = document.querySelector("header");
     const handleScroll = () => {
@@ -61,6 +65,7 @@ export default function Header({ isHome }) {
           // Non-home page scroll behavior
           const isScrolled = window.scrollY > 150;
           header.firstElementChild.classList.toggle("hidden", isScrolled);
+          header.classList.toggle("shadow-[0_6px_8px_-1px_rgba(0,0,0,0.3)]", isScrolled);
         }
       }, 100);
     };
@@ -85,18 +90,39 @@ export default function Header({ isHome }) {
     >
       <ul className="flex items-center gap-2 p-3 justify-center md:justify-end">
         <li>
-          <Link className="" href="https://www.instagram.com/legacychurchofficial/">
-            <InstagramIcon styles="fill-white hover:fill-cyan-700" />
+          <Link
+            className=""
+            href="https://www.instagram.com/legacychurchofficial/"
+            passHref
+            legacyBehavior
+          >
+            <a target="_blank">
+              <InstagramIcon styles="fill-white hover:fill-cyan-700" />
+            </a>
           </Link>
         </li>
         <li>
-          <Link className="" href="https://www.facebook.com/legacychurchofficial">
-            <FacebookIcon styles="fill-white hover:fill-cyan-700" />
+          <Link
+            className=""
+            href="https://www.facebook.com/legacychurchofficial"
+            passHref
+            legacyBehavior
+          >
+            <a target="_blank">
+              <FacebookIcon styles="fill-white hover:fill-cyan-700" />
+            </a>
           </Link>
         </li>
         <li>
-          <Link className="" href="https://www.youtube.com/channel/UC93pSS2r4KNRLDelYoXbtbA">
-            <YoutubeIcon styles="fill-white hover:fill-cyan-700" />
+          <Link
+            className=""
+            href="https://www.youtube.com/channel/UC93pSS2r4KNRLDelYoXbtbA"
+            passHref
+            legacyBehavior
+          >
+            <a target="_blank">
+              <YoutubeIcon styles="fill-white hover:fill-cyan-700" />
+            </a>
           </Link>
         </li>
       </ul>
@@ -136,7 +162,9 @@ export default function Header({ isHome }) {
                 <Dropdown linksList={ImNewLinks} title="I`m New" />
               </li>
             </motion.ul>
-            <Hamburger color="white" toggled={isActive} toggle={setIsActive} />
+            <div className="">
+              <Hamburger color="white" toggled={isActive} toggle={setIsActive} />
+            </div>
           </nav>
         </div>
         <motion.div
@@ -145,7 +173,9 @@ export default function Header({ isHome }) {
           animate={isActive ? "open" : "closed"}
           className="bg-black opacity-50 h-full w-full absolute left-0 top-0 -z-10"
         ></motion.div>
-        <AnimatePresence mode="wait">{isActive && <Nav />}</AnimatePresence>
+        <AnimatePresence mode="wait">
+          {isActive && <Nav onLinkClick={handleLinkClick} />}
+        </AnimatePresence>
       </div>
     </header>
   );

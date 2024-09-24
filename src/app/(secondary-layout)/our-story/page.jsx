@@ -31,7 +31,7 @@ export default function OurStory() {
           width={400}
           height={400}
           alt="Picture of the author"
-          className="w-full md:w-1/2"
+          className="w-full md:w-1/2 max-w-lg"
         />
       </div>
       <div className="mx-auto w-full flex flex-col md:flex-row gap-8 p-16 bg-[#ecf0f1]">
@@ -40,7 +40,7 @@ export default function OurStory() {
           width={500}
           height={500}
           alt="Picture of the author"
-          className="w-full md:w-1/2 order-2 md:order-1"
+          className="w-full md:w-1/2 order-2 md:order-1 max-w-lg"
         />
         <div className="w-full md:w-1/2 order-1 md:order-2">
           <h2 className="mb-10 lg:text-6xl text-4xl font-light">Expanding the vision...</h2>
@@ -66,7 +66,7 @@ export default function OurStory() {
           width={500}
           height={500}
           alt="Picture of the author"
-          className="w-full md:w-1/2"
+          className="w-full md:w-1/2 max-w-lg"
         />
       </div>
       <ServiceTimes />

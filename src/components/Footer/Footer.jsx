@@ -70,18 +70,39 @@ export default function Footer() {
           <h3 className="text-2xl">Follow Us</h3>
           <ul className="flex items-center gap-2">
             <li>
-              <Link className="" href="https://www.instagram.com/legacychurchofficial/">
-                <InstagramIcon styles="fill-white hover:fill-cyan-700" />
+              <Link
+                className=""
+                href="https://www.instagram.com/legacychurchofficial/"
+                passHref
+                legacyBehavior
+              >
+                <a target="_blank">
+                  <InstagramIcon styles="fill-white hover:fill-cyan-700" />
+                </a>
               </Link>
             </li>
             <li>
-              <Link className="" href="https://www.facebook.com/legacychurchofficial">
-                <FacebookIcon styles="fill-white hover:fill-cyan-700" />
+              <Link
+                className=""
+                href="https://www.facebook.com/legacychurchofficial"
+                passHref
+                legacyBehavior
+              >
+                <a target="_blank">
+                  <FacebookIcon styles="fill-white hover:fill-cyan-700" />
+                </a>
               </Link>
             </li>
             <li>
-              <Link className="" href="https://www.youtube.com/channel/UC93pSS2r4KNRLDelYoXbtbA">
-                <YoutubeIcon styles="fill-white hover:fill-cyan-700" />
+              <Link
+                className=""
+                href="https://www.youtube.com/channel/UC93pSS2r4KNRLDelYoXbtbA"
+                passHref
+                legacyBehavior
+              >
+                <a target="_blank">
+                  <YoutubeIcon styles="fill-white hover:fill-cyan-700" />
+                </a>
               </Link>
             </li>
           </ul>
@@ -90,27 +111,35 @@ export default function Footer() {
               <Link
                 className="hover:text-[#3498db]"
                 href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_X2WRGF&hl=en_US"
+                passHref
+                legacyBehavior
               >
-                <Image
-                  src={androidLogo}
-                  width={145}
-                  height={45}
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  alt="Legacy Church App download link for Android"
-                />
+                <a target="_blank">
+                  <Image
+                    src={androidLogo}
+                    width={145}
+                    height={45}
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    alt="Legacy Church App download link for Android"
+                  />
+                </a>
               </Link>
             </li>
             <li>
               <Link
                 className="hover:text-[#3498db]"
                 href="https://apps.apple.com/us/app/legacy-church-official/id1622867116"
+                passHref
+                legacyBehavior
               >
-                <Image
-                  src={appleLogo}
-                  width={145}
-                  height={45}
-                  alt="Legacy Church App download link for Apple"
-                />
+                <a target="_blank">
+                  <Image
+                    src={appleLogo}
+                    width={145}
+                    height={45}
+                    alt="Legacy Church App download link for Apple"
+                  />
+                </a>
               </Link>
             </li>
           </ul>
