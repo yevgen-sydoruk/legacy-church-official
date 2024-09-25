@@ -15,7 +15,7 @@ export default function LegacyYouth() {
   return (
     <section className="pt-[120px]">
       <Banner heading={"LEGACY YOUTH"} text={""} bannerImage={bannerImage} />
-      <div className="mx-auto px-10 py-16 flex flex-col items-center text-center gap-5">
+      <div className="mx-auto max-w-6xl px-10 py-16 flex flex-col items-center text-center gap-5">
         <a href="https://www.bible.com/bible/114/LUK.4.18-19" target="_blank">
           <h2 className="mb-5 lg:text-6xl text-4xl font-light">
             "The Spirit of Lord is on me, because He has anointed me..."
