@@ -33,7 +33,7 @@ export async function POST(req) {
         name: `Legacy Web Page`,
         address: `${process.env.SMTP_USER}`
       },
-      to: "drevil3372@gmail.com", //send to church email
+      to: "drevilemailtest@gmail.com", //send to church email
       //   bcc: "usmanasifdev@gmail.com",
       replyTo: body.email,
       subject: `New Message from Legacy Web Page - ${body.sentFromPage}`,

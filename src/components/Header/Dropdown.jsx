@@ -48,7 +48,11 @@ const FlyoutLink = ({ children, links, open, toggleOpen }) => {
             {links.map((link, index) => {
               const { title, href } = link;
               return (
-                <Link className="p-2 m-[3px] rounded-md" key={`l_${index}`} href={href}>
+                <Link
+                  className="p-2 m-[3px] rounded-md hover:bg-[#3498db]"
+                  key={`l_${index}`}
+                  href={href}
+                >
                   {title}
                 </Link>
               );

@@ -64,7 +64,7 @@ export default function Header({ isHome }) {
         } else {
           // Non-home page scroll behavior
           const isScrolled = window.scrollY > 150;
-          header.firstElementChild.classList.toggle("hidden", isScrolled);
+          // header.firstElementChild.classList.toggle("hidden", isScrolled);
           header.classList.toggle("shadow-[0_6px_8px_-1px_rgba(0,0,0,0.3)]", isScrolled);
         }
       }, 100);

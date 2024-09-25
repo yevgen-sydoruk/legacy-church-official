@@ -23,7 +23,7 @@ export default function Leadership() {
             <Image
               src={leader_1}
               width={300}
-              height={300}
+              height="auto"
               alt="Picture of the author"
               className=""
             />
@@ -50,7 +50,7 @@ export default function Leadership() {
             <Image
               src={leader_2}
               width={300}
-              height={300}
+              height="auto"
               alt="Picture of the author"
               className=""
             />
@@ -77,7 +77,7 @@ export default function Leadership() {
             <Image
               src={leader_3}
               width={300}
-              height={300}
+              height="auto"
               alt="Picture of the author"
               className=""
             />
@@ -104,7 +104,7 @@ export default function Leadership() {
             <Image
               src={leader_4}
               width={300}
-              height={300}
+              height="auto"
               alt="Picture of the author"
               className=""
             />
@@ -131,7 +131,7 @@ export default function Leadership() {
             <Image
               src={leader_5}
               width={300}
-              height={300}
+              height="auto"
               alt="Picture of the author"
               className="absolute -top-20"
             />
@@ -148,6 +148,7 @@ export default function Leadership() {
           <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
             Contact
           </button>
+          {/* oksana.a1017@gmail.com <oksana.a1017@gmail.com>; */}
         </div>
       </div>
     </section>
