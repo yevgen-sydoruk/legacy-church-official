@@ -38,7 +38,7 @@ export const connectLinks = [
 
   {
     title: "Volunteer",
-    href: "/Volunteer"
+    href: "/volunteer"
   },
   {
     title: "Prayer Request",
