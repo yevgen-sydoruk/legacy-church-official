@@ -3,7 +3,7 @@ import CafeBlock from "@/components/CafeBlock/CafeBlock";
 import Hero from "@/components/Hero/Hero";
 import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
 import Welcome from "@/components/Welcome/Welcome";
-import MiraclesChallenge from "@/components/MiraclesChallenge/MiraclesChallenge";
+import MiraclesChallengeBlock from "@/components/MiraclesChallengeBlock/MiraclesChallengeBlock";
 import UkraineRelief from "@/components/UkraineRelief/UkraineRelief";
 import WatchService from "@/components/WatchService/WatchService";
 import { ContactForm } from "@/components/ContactForms/ContactForm";
@@ -19,7 +19,7 @@ export default function Home() {
     <main>
       <Hero />
       <Welcome />
-      <MiraclesChallenge />
+      <MiraclesChallengeBlock />
       <VolunteerBlock />
       <ServiceTimes />
       <WatchService />

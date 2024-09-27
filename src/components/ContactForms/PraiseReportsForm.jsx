@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { ToastContainer, toast } from "react-toastify";
 import clsx from "clsx";
 
-export function LifeGroupsSignUpForm({ title, text, sentFromPage }) {
+export function PraiseReportsForm({ title, text, sentFromPage }) {
   const [isLoading, setIsLoading] = useState(false);
   const {
     control,
@@ -22,7 +22,7 @@ export function LifeGroupsSignUpForm({ title, text, sentFromPage }) {
 
     const payload = { ...data, sentFromPage };
 
-    fetch("/api/LiveGroupMeeting", {
+    fetch("/api/PraiseReport", {
       method: "POST",
       headers: {
         Accept: "application/json, text/plain, */*",
@@ -59,15 +59,6 @@ export function LifeGroupsSignUpForm({ title, text, sentFromPage }) {
   };
   return (
     <>
-      {/* <div className="relative bg-white">
-        <div className="lg:absolute lg:inset-0 lg:left-1/2">
-          <img
-            className="h-64 w-full bg-gray-50 object-cover sm:h-80 lg:absolute lg:h-full"
-            src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-x=.4&w=2560&h=3413&&q=80"
-            alt=""
-          />
-        </div> */}
-      {/* <section className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32"> */}
       <section className="pb-24 pt-16 sm:pb-32 sm:pt-24  bg-[#ecf0f1]">
         <div className="max-w-3xl mx-auto  px-6 lg:px-8 items-center justify-center content-center">
           <div className="mx-auto max-w-5xl lg:max-w-2xl text-center">
@@ -103,23 +94,6 @@ export function LifeGroupsSignUpForm({ title, text, sentFromPage }) {
                   />
                 </div>
               </div>
-              <div className="flex gap-2 w-full">
-                <div className="w-full">
-                  <label
-                    htmlFor="demographics"
-                    className="block text-sm font-semibold text-gray-900"
-                  >
-                    Demographics (age, gender, student, single, parent, etc.)
-                  </label>
-                  <input
-                    className="mt-2.5 p-2 w-full border-2 border-[#daddde] focus-visible:border-[#3498db] rounded-lg bg-[#daddde] outline-none"
-                    type="text"
-                    name="demographics"
-                    id="demographics"
-                    {...register("demographics")}
-                  />
-                </div>
-              </div>
               <div className="">
                 <label
                   htmlFor="email"
@@ -135,34 +109,18 @@ export function LifeGroupsSignUpForm({ title, text, sentFromPage }) {
                   {...register("email", { required: true })}
                 />
               </div>
-              <div className="">
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-semibold leading-6 text-gray-900"
-                >
-                  Phone Number*
-                </label>
-                <input
-                  className="mt-2.5 p-2 w-full border-2 border-[#daddde] focus-visible:border-[#3498db] rounded-lg bg-[#daddde] outline-none"
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  placeholder="(___)___-____"
-                  {...register("phone", { required: true })}
-                />
-              </div>
               <fieldset>
                 <legend className="block text-sm font-semibold leading-6 text-gray-900">
-                  Are you interested in a couples group?*
+                  Did you send us a prayer request?*
                 </legend>
                 <div className="mt-4 space-y-4 text-sm leading-6 text-gray-600">
                   <div className="flex gap-x-2.5">
                     <input
                       id="answer_yes"
-                      name="couples_group_interest"
+                      name="prayer_requested"
                       defaultValue="Yes"
                       type="radio"
-                      {...register("couples_group_interest", { required: true })}
+                      {...register("prayer_requested", { required: true })}
                       className="mt-1"
                     />
                     <label htmlFor="answer_yes">Yes</label>
@@ -170,111 +128,32 @@ export function LifeGroupsSignUpForm({ title, text, sentFromPage }) {
                   <div className="flex gap-x-2.5">
                     <input
                       id="answer_no"
-                      name="couples_group_interest"
+                      name="prayer_requested"
                       defaultValue="No"
                       type="radio"
-                      {...register("couples_group_interest", { required: true })}
+                      {...register("prayer_requested", { required: true })}
                       className="mt-1"
                     />
                     <label htmlFor="answer_no">No</label>
                   </div>
                 </div>
               </fieldset>
-              <fieldset className="mt-4">
-                <legend className="block text-sm font-semibold text-gray-900">
-                  What topics are you interested in?
-                </legend>
-                <div className="flex flex-col mt-2">
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id="Option1"
-                      value="Spiritual Gifts"
-                      {...register("checkboxOptions")}
-                      className="mr-2"
-                    />
-                    <label htmlFor={"Option1"} className="text-gray-900">
-                      Spiritual Gifts
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id="Option2"
-                      value="Identity in Christ"
-                      {...register("checkboxOptions")}
-                      className="mr-2"
-                    />
-                    <label htmlFor={"Option2"} className="text-gray-900">
-                      Identity in Christ
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id="Option3"
-                      value="Dating/Marriage"
-                      {...register("checkboxOptions")}
-                      className="mr-2"
-                    />
-                    <label htmlFor={"Option3"} className="text-gray-900">
-                      Dating/Marriage
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id="Option4"
-                      value="Bible Study"
-                      {...register("checkboxOptions")}
-                      className="mr-2"
-                    />
-                    <label htmlFor={"Option4"} className="text-gray-900">
-                      Bible Study
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id="Option5"
-                      value="Leadership"
-                      {...register("checkboxOptions")}
-                      className="mr-2"
-                    />
-                    <label htmlFor={"Option5"} className="text-gray-900">
-                      Leadership
-                    </label>
-                  </div>
-                  <div className="flex items-center">
-                    <input
-                      type="checkbox"
-                      id="Option6"
-                      value="Spiritual Growth"
-                      {...register("checkboxOptions")}
-                      className="mr-2"
-                    />
-                    <label htmlFor={"Option6"} className="text-gray-900">
-                      Spiritual Growth
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
               <div className="">
                 <div className="flex justify-between text-sm leading-6">
                   <label
-                    htmlFor="message"
+                    htmlFor="testimony"
                     className="block text-sm font-semibold leading-6 text-gray-900"
                   >
-                    Anything else you'd like to share?
+                    Share your testimony!
                   </label>
                 </div>
                 <textarea
                   className="mt-2.5 p-2 w-full border-2 border-[#daddde] focus-visible:border-[#3498db] rounded-lg bg-[#daddde] outline-none"
-                  id="message"
-                  name="message"
+                  id="testimony"
+                  name="testimony"
                   rows={4}
                   aria-describedby="message-description"
-                  {...register("message")}
+                  {...register("testimony")}
                 />
               </div>
             </div>
@@ -311,7 +190,7 @@ export function LifeGroupsSignUpForm({ title, text, sentFromPage }) {
                     Submitting...
                   </>
                 ) : (
-                  "Send"
+                  "SEND PRAISE REPORT"
                 )}
               </button>
             </div>

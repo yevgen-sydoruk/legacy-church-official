@@ -41,8 +41,8 @@ export const connectLinks = [
     href: "/volunteer"
   },
   {
-    title: "Prayer Request",
-    href: "/prayer-request"
+    title: "Miracle Challenge",
+    href: "/miracle-challenge"
   },
   {
     title: "Legacy Cafe",
