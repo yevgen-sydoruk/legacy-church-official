@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 
 @layer components {
   .link-dark-on-image-bg {
@@ -9,5 +10,8 @@
   .link-decoration-underline {
     @apply underline underline-offset-2 hover:underline-offset-4 transition-all !important;
   }
+}
+body {
+  font-family: "Lato", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 /* font-family: "Lato",Arial,"Helvetica Neue",Helvetica,sans-serif; */

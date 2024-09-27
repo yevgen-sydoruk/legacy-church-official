@@ -1,10 +1,7 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import "react-toastify/ReactToastify.min.css";
-import Header from "@/components/Header/Header";
-import Footer from "@/components/Footer/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import "../../pe-icon-7-stroke/css/pe-icon-7-stroke.css";
+import "../../pe-icon-7-stroke/css/helper.css";
 
 export const metadata = {
   title: "Legacy Church Official",
@@ -14,12 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
-      {/* <body className={inter.className} suppressHydrationWarning={true}> */}
-      <body className={inter.className}>
-        {/* <Header /> */}
-        {children}
-        {/* <Footer /> */}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

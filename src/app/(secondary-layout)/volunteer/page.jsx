@@ -4,8 +4,9 @@ import React from "react";
 import bannerImage from "../../../../public/volunteer_banner.jpg";
 import volunteerImage1 from "../../../../public/volunteer_images/volunteer_image1.jpg";
 import volunteerImage2 from "../../../../public/volunteer_images/volunteer_image2.jpg";
-import Image from "next/image";
+import { accordionData } from "./accordionData";
 import Link from "next/link";
+import Accordion from "../../../components/Accordion/Accordion";
 
 export const metadata = {
   title: "Legacy Church - MA - Mission And Vision",
@@ -51,7 +52,7 @@ export default function Volunteer() {
           Sign up to serve
         </Link>
       </div>
-      <div className="mx-auto flex flex-col  px-10 py-16 gap-10 bg-[#ecf0f1]">
+      <div className="mx-auto flex flex-col px-10 py-16 gap-10 bg-[#ecf0f1]">
         <h2 className="sm:text-6xl text-4xl font-light text-center">
           Check out all the opportunities.
         </h2>
@@ -59,76 +60,102 @@ export default function Volunteer() {
           Have a gift or talent not included here? We want to know about it! We believe in God-given
           gifts and want to help you steward yours for His glory!
         </p>
-        <div className="grid grid-rows-2 grid-cols-2 gap-10 justify-items-center">
-          <div className="">
-            <h3 className="text-xl font-bold mb-3">If you love worship</h3>
-            <ol className="flex flex-col list-disc gap-1">
-              <li className="">
-                <p className="">Musician</p>
-              </li>
-              <li className="">
-                <p className="">Vocalist</p>
-              </li>
-            </ol>
+        <div className="grid grid-rows-2 grid-cols-1 md:grid-cols-2 auto-cols-auto gap-10 justify-items-center">
+          <div className="w-[400px] flex">
+            <div className="p-3 mr-8 border-2 border-[#3498db] rounded-full self-start text-center">
+              <i className="pe-7s-users pe-3x pe-va text-[#3498db] w-[48px]"></i>
+            </div>
+            <div className="">
+              <h3 className="text-xl font-bold mb-3">If you love people</h3>
+              <ol className="flex flex-col list-disc gap-1">
+                <li className="">
+                  <p className="">Greeters</p>
+                </li>
+                <li className="">
+                  <p className="">Prayer Team</p>
+                </li>
+                <li className="">
+                  <p className="">MC</p>
+                </li>
+                <li className="">
+                  <p className="">Lil Legacy Instructor</p>
+                </li>
+                <li className="">
+                  <p className="">Youth Teams</p>
+                </li>
+              </ol>
+            </div>
           </div>
-          <div className="">
-            <h3 className="text-xl font-bold mb-3">If you love people</h3>
-            <ol className="flex flex-col list-disc gap-1">
-              <li className="">
-                <p className="">Greeters</p>
-              </li>
-              <li className="">
-                <p className="">Prayer Team</p>
-              </li>
-              <li className="">
-                <p className="">MC</p>
-              </li>
-              <li className="">
-                <p className="">Lil Legacy Instructor</p>
-              </li>
-              <li className="">
-                <p className="">Youth Teams</p>
-              </li>
-            </ol>
+          <div className="w-[400px] flex">
+            <div className="p-3 mr-8 border-2 border-[#3498db] rounded-full self-start text-center">
+              <i className="pe-7s-headphones pe-3x pe-va text-[#3498db] w-[48px]"></i>
+            </div>
+            <div className="">
+              <h3 className="text-xl font-bold mb-3">If you love production</h3>
+              <ol className="flex flex-col list-disc gap-1">
+                <li className="">
+                  <p className="">Lyrics/ Projector coordinator</p>
+                </li>
+                <li className="">
+                  <p className="">Audio Tech</p>
+                </li>
+                <li className="">
+                  <p className="">Light Specialist</p>
+                </li>
+              </ol>
+            </div>
           </div>
-          <div className="">
-            <h3 className="text-xl font-bold mb-3">If you love production</h3>
-            <ol className="flex flex-col list-disc gap-1">
-              <li className="">
-                <p className="">Lyrics/ Projector coordinator</p>
-              </li>
-              <li className="">
-                <p className="">Audio Tech</p>
-              </li>
-              <li className="">
-                <p className="">Light Specialist</p>
-              </li>
-            </ol>
+          <div className="w-[400px] flex">
+            <div className="p-3 mr-8 border-2 border-[#3498db] rounded-full self-start text-center">
+              <i className="pe-7s-camera pe-3x pe-va text-[#3498db] w-[48px]"></i>
+            </div>
+            <div className="">
+              <h3 className="text-xl font-bold mb-3">If you love to create</h3>
+              <ol className="flex flex-col list-disc gap-1">
+                <li className="">
+                  <p className="">Photographer</p>
+                </li>
+                <li className="">
+                  <p className="">Web Designer</p>
+                </li>
+                <li className="">
+                  <p className="">Livestream Director</p>
+                </li>
+                <li className="">
+                  <p className="">Merch Designer</p>
+                </li>
+              </ol>
+            </div>
           </div>
-          <div className="">
-            <h3 className="text-xl font-bold mb-3">If you love to create</h3>
-            <ol className="flex flex-col list-disc gap-1">
-              <li className="">
-                <p className="">Photographer</p>
-              </li>
-              <li className="">
-                <p className="">Web Designer</p>
-              </li>
-              <li className="">
-                <p className="">Livestream Director</p>
-              </li>
-              <li className="">
-                <p className="">Merch Designer</p>
-              </li>
-            </ol>
+          <div className="w-[400px] flex">
+            <div className="p-3 mr-8 border-2 border-[#3498db] rounded-full self-start text-center">
+              <i className="pe-7s-music pe-3x pe-va text-[#3498db] w-[48px]"></i>
+            </div>
+            <div className="">
+              <h3 className="text-xl font-bold mb-3">If you love worship</h3>
+              <ol className="flex flex-col list-disc gap-1">
+                <li className="">
+                  <p className="">Musician</p>
+                </li>
+                <li className="">
+                  <p className="">Vocalist</p>
+                </li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
+      <div className="bg-[#3498db] text-white px-10 py-16">
+        <h2 className="mb-5 sm:text-6xl text-4xl font-light text-center">Volunteer FAQ</h2>
+        <Accordion accordionData={accordionData} />
+      </div>
       <div id="contactForm">
         <ContactForm
-          title={"Connect with us."}
-          text={"We'd love to hear from you! Fill out the form below to get started."}
-          sentFromPage={"Mission & Vision"}
+          title={"Ready for volunteering?"}
+          text={
+            "Or have any questions? We'd love to clarify any volunteering questions! Please use the form below."
+          }
+          sentFromPage={"Volunteer"}
         />
       </div>
     </section>
