@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner/Banner";
-import { ContactForm } from "@/components/ContactForm/ContactForm";
+import { ContactForm } from "@/components/ContactForms/ContactForm";
 import React from "react";
 import bannerImage from "../../../../public/lil_legacy_banner.jpg";
 import lilLegacy1 from "../../../../public/lil_Legacy_Gallery/lil_legacy_1.jpg";

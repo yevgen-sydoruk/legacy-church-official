@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner/Banner";
-import { ContactForm } from "@/components/ContactForm/ContactForm";
+import { ContactForm } from "@/components/ContactForms/ContactForm";
 import React from "react";
 import bannerImage from "../../../../public/what_we_believe_banner.jpg";
 

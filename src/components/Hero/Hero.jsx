@@ -11,7 +11,7 @@ export default function Hero() {
         <Link href="#watchService" className="link-dark-on-image-bg">
           Watch us online
         </Link>
-        <Link href="#watchService" className="link-dark-on-image-bg">
+        <Link href="what-we-believe" className="link-dark-on-image-bg">
           What we believe
         </Link>
       </div>

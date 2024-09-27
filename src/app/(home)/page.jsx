@@ -6,7 +6,7 @@ import Welcome from "@/components/Welcome/Welcome";
 import MiraclesChallenge from "@/components/MiraclesChallenge/MiraclesChallenge";
 import UkraineRelief from "@/components/UkraineRelief/UkraineRelief";
 import WatchService from "@/components/WatchService/WatchService";
-import { ContactForm } from "@/components/ContactForm/ContactForm";
+import { ContactForm } from "@/components/ContactForms/ContactForm";
 import VolunteerBlock from "@/components/VolunteerBlock/VolunteerBlock";
 
 export const metadata = {

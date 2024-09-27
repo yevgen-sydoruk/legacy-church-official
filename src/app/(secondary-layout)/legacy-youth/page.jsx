@@ -4,7 +4,7 @@ import bannerImage from "../../../../public/legacy_youth_banner.jpg";
 import legacyYouthLogo from "../../../../public/legacy_youth_logo.png";
 import Image from "next/image";
 import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
-import { ContactForm } from "@/components/ContactForm/ContactForm";
+import { ContactForm } from "@/components/ContactForms/ContactForm";
 
 export const metadata = {
   title: "Legacy Church - MA - Mission And Vision",

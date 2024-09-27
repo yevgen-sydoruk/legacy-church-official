@@ -19,10 +19,10 @@ module.exports = {
       },
       boxShadow: {
         "nav-shadow": "0 6px 8px -1px rgba(0,0,0,0.3)"
-      },
-      fontFamily: {
-        sans: ["Lato", "Arial", "Helvetica Neue", "Helvetica", "sans-serif"]
       }
+      // fontFamily: {
+      //   sans: ["Lato", "Arial", "Helvetica Neue", "Helvetica", "sans-serif"]
+      // }
     }
   },
   plugins: []

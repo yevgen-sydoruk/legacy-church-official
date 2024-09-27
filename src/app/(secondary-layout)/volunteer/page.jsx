@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner/Banner";
-import { ContactForm } from "@/components/ContactForm/ContactForm";
+import { ContactForm } from "@/components/ContactForms/ContactForm";
 import React from "react";
 import bannerImage from "../../../../public/volunteer_banner.jpg";
 import volunteerImage1 from "../../../../public/volunteer_images/volunteer_image1.jpg";
