@@ -17,8 +17,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={lato_init.className}>{children}</body>
+    <html lang="en" className={`scroll-smooth ${lato_init.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }

@@ -10,7 +10,7 @@
     @apply underline underline-offset-2 hover:underline-offset-4 transition-all !important;
   }
 }
-html {
+body {
   font-family: var(--font-lato), Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 /* font-family: "Lato",Arial,"Helvetica Neue",Helvetica,sans-serif; */
