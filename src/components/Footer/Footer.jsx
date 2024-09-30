@@ -21,12 +21,12 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="#">
                 Our Story
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="#">
                 Meet Our Staff
               </Link>
             </li>
@@ -35,9 +35,9 @@ export default function Footer() {
         <div className="flex flex-col items-center gap-3">
           <h3 className="text-2xl">Service Times</h3>
           <div className="flex flex-col items-center gap-2">
-            <h4>Sunday Service</h4>
+            <h4 className="text-xl font-bold">Sunday Service</h4>
             <p className="">9:00 AM</p>
-            <h4>Wednesday Youth Service</h4>
+            <h4 className="text-xl font-bold">Wednesday Youth Service</h4>
             <p>7:00 PM</p>
           </div>
         </div>
@@ -45,22 +45,22 @@ export default function Footer() {
           <h3 className="text-2xl">Support</h3>
           <ul className="flex flex-col items-center gap-2">
             <li>
-              <Link className="link-decoration-underline" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="#">
                 I'm New
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="#">
                 Baptism Sign-Up
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="#">
                 Prayer Request
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="#">
                 Join A Life Group
               </Link>
             </li>
@@ -77,7 +77,7 @@ export default function Footer() {
                 legacyBehavior
               >
                 <a target="_blank">
-                  <InstagramIcon styles="fill-white hover:fill-cyan-700" />
+                  <InstagramIcon styles="fill-white hover:fill-black" />
                 </a>
               </Link>
             </li>
@@ -89,7 +89,7 @@ export default function Footer() {
                 legacyBehavior
               >
                 <a target="_blank">
-                  <FacebookIcon styles="fill-white hover:fill-cyan-700" />
+                  <FacebookIcon styles="fill-white hover:fill-black" />
                 </a>
               </Link>
             </li>
@@ -101,7 +101,7 @@ export default function Footer() {
                 legacyBehavior
               >
                 <a target="_blank">
-                  <YoutubeIcon styles="fill-white hover:fill-cyan-700" />
+                  <YoutubeIcon styles="fill-white hover:fill-black" />
                 </a>
               </Link>
             </li>

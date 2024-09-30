@@ -33,7 +33,7 @@ export default function Nav({ onLinkClick }) {
       className="overflow-hidden h-full text-white"
     >
       <div className="container mx-auto py-5 h-full">
-        <nav className="grid grid-rows-3 grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-4 uppercase text-base ">
+        <nav className="grid grid-rows-3 grid-cols-2 md:grid-rows-2 md:grid-cols-3 gap-4 uppercase text-base">
           <div className="row-span-2 md:order-1 order-1">
             <h3 className="mb-4 text-2xl">About</h3>
             <ul className="flex flex-col gap-2">
