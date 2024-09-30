@@ -13,7 +13,7 @@ export default function WhatWeBelieve() {
     <section className="pt-[120px]">
       <Banner
         heading={"What We Believe"}
-        text={`"What comes into our minds when we think about God is the most important thing about us." - A.W. Tozer"`}
+        text={`"What comes into our minds when we think about God is the most important thing about us." - A.W. Tozer`}
         bannerImage={bannerImage}
       />
       <div className="container mx-auto px-10 py-16 flex justify-around text-center gap-10">
