@@ -16,17 +16,17 @@ export default function Footer() {
           <h3 className="text-2xl">About</h3>
           <ul className="flex flex-col items-center gap-2">
             <li>
-              <Link className="link-decoration-underline hover:text-black" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="what-we-believe">
                 What We Believe
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline hover:text-black" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="our-story">
                 Our Story
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline hover:text-black" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="leadership">
                 Meet Our Staff
               </Link>
             </li>
@@ -50,17 +50,17 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline hover:text-black" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="baptism-signup">
                 Baptism Sign-Up
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline hover:text-black" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="miracle-challenge">
                 Prayer Request
               </Link>
             </li>
             <li>
-              <Link className="link-decoration-underline hover:text-black" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="join-a-life-group">
                 Join A Life Group
               </Link>
             </li>
