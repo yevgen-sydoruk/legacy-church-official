@@ -40,7 +40,7 @@ export default function LegacyCafe() {
           Changing your world one cup of coffee at a time.
         </p>
         <p className="max-w-2xl font-light leading-8">
-          First time at Legacy Church? Enjoy a free drink on us!!
+          First time at Legacy Church? Enjoy a free drink on us!
         </p>
         <strong className="text-xl font-bold">MOBILE ORDER AVAILABLE</strong>
         <p className="max-w-lg">
@@ -56,7 +56,7 @@ export default function LegacyCafe() {
               rel="noopener noreferrer"
               className="text-[#3498db] link-decoration-underline"
             >
-              Legacy Church Official App for Apple,{" "}
+              Legacy Church Official App for Apple{" "}
             </a>
           </Link>
           <br></br>
@@ -72,7 +72,7 @@ export default function LegacyCafe() {
               rel="noopener noreferrer"
               className="text-[#3498db] link-decoration-underline"
             >
-              Legacy Church Official App for Android.{" "}
+              Legacy Church Official App for Android{" "}
             </a>
           </Link>
         </p>
@@ -81,43 +81,65 @@ export default function LegacyCafe() {
         className="relative w-full mx-auto max-w-6xl h-full px-10 py-16 flex flex-col gap-10 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${cafeMenu.src})` }} // Ensure .src is used for Next.js Image
       >
-        <h3 className="text-4xl font-bold uppercase text-center">Legacy cafe</h3>
+        <h3 className="text-4xl font-light uppercase text-center font-serif underline decoration-1 decoration-white underline-offset-8">
+          Legacy cafe menu
+        </h3>
         <div className="grid grid-cols-2 gap-2">
           <h4 className="text-xl font-bold">Cold Drinks</h4>
-          <p className="font-bold">Price</p>
-          <p className="">Iced Latte</p>
-          <p className="">$4.50</p>
-          <p className="">Iced Cappuchino</p>
-          <p className="">$3.50</p>
-          <p className="">Iced Tea</p>
-          <p className="">$3.00</p>
+          <p className="font-bold text-right sm:text-left">Price</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Iced Latte</p>
+          <p className="text-right sm:text-left">$4.00</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Iced Cappuchino</p>
+          <p className="text-right sm:text-left">$3.50</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Iced Tea</p>
+          <p className="text-right sm:text-left">$3.00</p>
         </div>
         <div className="grid grid-cols-2 gap-2">
           <h4 className="text-xl font-bold">Hot Drinks</h4>
-          <p className="font-bold">Price</p>
-          <p className="">Espresso</p>
-          <p className="">$2.00</p>
-          <p className="">Americano</p>
-          <p className="">$3.00</p>
-          <p className="">Cortado</p>
-          <p className="">$3.50</p>
-          <p className="">Cappuccino</p>
-          <p className="">$3.50</p>
-          <p className="">Latte</p>
-          <p className="">$3.50</p>
-          <p className="">London Fog</p>
-          <p className="">$3.00</p>
-          <p className="">Tea</p>
-          <p className="">$3.00</p>
+          <p className="font-bold text-right sm:text-left">Price</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Espresso</p>
+          <p className="text-right sm:text-left">$2.00</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Americano</p>
+          <p className="text-right sm:text-left">$3.00</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Cortado</p>
+          <p className="text-right sm:text-left">$3.50</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Cappuccino</p>
+          <p className="text-right sm:text-left">$3.50</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Latte</p>
+          <p className="text-right sm:text-left">$4.00</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Chai Tea Latte</p>
+          <p className="text-right sm:text-left">$4.00</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>London Fog Latte</p>
+          <p className="text-right sm:text-left">$3.00</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Matcha Latte</p>
+          <p className="text-right sm:text-left">$3.50</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Hot Chocolate</p>
+          <p className="text-right sm:text-left">$2.00</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Tea</p>
+          <p className="text-right sm:text-left">$3.00</p>
         </div>
         <div className="grid grid-cols-2 gap-2">
           <h4 className="text-xl font-bold">Flavors</h4>
-          <p className="font-bold">+$0.5</p>
-          <p className="">Caramel</p>
-          <p className="">Cinnamon</p>
-          <p className="">Vanilla</p>
-          <p className="">Lavander</p>
-          <p className="">Hazelnut</p>
+          <p className="font-bold text-right sm:text-left">+$0.5</p>
+          <hr className="col-span-2 border-white/80" />
+          <p>Caramel</p>
+          <p className="text-right sm:text-left">Cinnamon</p>
+          <p>Vanilla</p>
+          <p className="text-right sm:text-left">Lavander</p>
+          <p>Hazelnut</p>
         </div>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto px-10 py-16 justify-items-center">
@@ -134,16 +156,11 @@ export default function LegacyCafe() {
           style={{ backgroundImage: `url(${cafe_3.src})` }}
         ></div>
       </div>
-      <div className="flex items-center gap-4 justify-center py-8 text-xl font-bold">
-        Follow LEGACY Cafe on Instagram
-        <Link
-          className=""
-          href="https://www.instagram.com/legacy.church.cafe/"
-          passHref
-          legacyBehavior
-        >
-          <a target="_blank">
-            <InstagramIcon styles="fill-black hover:fill-cyan-700" />
+      <div className="flex justify-center py-8 text-3xl font-bold">
+        <Link href="https://www.instagram.com/legacy.church.cafe/" passHref legacyBehavior>
+          <a target="_blank" className="flex gap-4 items-center text-[#3498db] hover:text-cyan-700">
+            Follow LEGACY Cafe on Instagram
+            <InstagramIcon styles="fill-[#3498db] hover:fill-cyan-700" />
           </a>
         </Link>
       </div>

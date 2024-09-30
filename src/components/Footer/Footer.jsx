@@ -16,7 +16,7 @@ export default function Footer() {
           <h3 className="text-2xl">About</h3>
           <ul className="flex flex-col items-center gap-2">
             <li>
-              <Link className="link-decoration-underline" href="#">
+              <Link className="link-decoration-underline hover:text-black" href="#">
                 What We Believe
               </Link>
             </li>
