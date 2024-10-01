@@ -34,9 +34,9 @@ export function ContactForm({ title, text, sentFromPage }) {
     })
       .then(res => {
         setIsLoading(false);
-        // console.log("Response received", res);
+        console.log("Response received", res);
         if (res.status === 200) {
-          // console.log("Response succeeded!");
+          console.log("Response succeeded!");
           toast.success("Thanks for submitting form. We will contact to you soon.", {
             position: "top-right",
             autoClose: 0,
@@ -44,7 +44,7 @@ export function ContactForm({ title, text, sentFromPage }) {
           });
         } else {
           setIsLoading(false);
-          // console.log("Email/Password is invalid.");
+          console.log("Email/Password is invalid.");
           toast.error("Server Issue! please try again later", {
             position: "top-right",
             autoClose: 0,

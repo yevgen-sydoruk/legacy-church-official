@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(req) {
@@ -54,7 +54,7 @@ export async function POST(req) {
     };
 
     await new Promise((resolve, reject) => {
-      transporter.sendMail(mailData, function (err, info) {
+      transporter.sendMail(mailData, (err, info) => {
         if (err) {
           console.error(err);
           reject(err);
@@ -65,7 +65,7 @@ export async function POST(req) {
       });
     });
 
-    return new Response(JSON.stringify({ status: "OK" }), {
+    return new NextResponse(JSON.stringify({ status: "OK" }), {
       status: 200,
       headers: {
         "Content-Type": "application/json"
