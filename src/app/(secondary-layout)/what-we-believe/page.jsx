@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner/Banner";
 import { ContactForm } from "@/components/ContactForms/ContactForm";
 import React from "react";
-import bannerImage from "../../../../public/what_we_believe_banner.jpg";
+import bannerImage from "../../../../public/what_we_believe_banner-min.jpg";
 
 export const metadata = {
   title: "Legacy Church - MA - Mission And Vision",
