@@ -1,5 +1,4 @@
 import Banner from "@/components/Banner/Banner";
-import { ContactForm } from "@/components/ContactForms/ContactForm";
 import React from "react";
 import bannerImage from "../../../../public/legacy-cafe.jpg";
 import cafeMenu from "../../../../public/legacy-cafe-menu.jpg";
@@ -11,8 +10,19 @@ import InstagramIcon from "../../../../assets/icons/InstagramIcon";
 import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
 
 export const metadata = {
-  title: "Legacy Church - MA - Mission And Vision",
-  description: "Page description"
+  title: "Legacy Church - MA - Legacy Cafe",
+  description:
+    "Join us at Legacy Cafe for specialty coffee, fellowship, and a welcoming community. Enjoy free drinks for first-time visitors!",
+  keywords:
+    "Legacy Cafe, coffee shop, specialty coffee, fellowship, Legacy Church, community, mobile ordering",
+  author: "Legacy Church",
+  og: {
+    title: "Welcome to Legacy Cafe",
+    description:
+      "Discover specialty coffee and community at Legacy Cafe. Join us for fellowship and enjoy a free drink if you're visiting for the first time!",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/legacy-cafe"
+  }
 };
 
 export default function LegacyCafe() {
@@ -145,7 +155,7 @@ export default function LegacyCafe() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto px-10 py-16 justify-items-center">
         <div
           className="relative w-full h-[300px] overflow-hidden bg-cover bg-center transition-transform duration-300 hover:scale-105"
-          style={{ backgroundImage: `url(${cafe_1.src})` }} // Ensure .src is used for Next.js Image
+          style={{ backgroundImage: `url(${cafe_1.src})` }}
         ></div>
         <div
           className="relative w-full h-[300px] overflow-hidden bg-cover bg-center transition-transform duration-300 hover:scale-105"

@@ -4,13 +4,23 @@ import Banner from "@/components/Banner/Banner";
 import React, { useState } from "react";
 import bannerImage from "../../../../public/legacy_youth_banner.jpg";
 import legacyYouthLogo from "../../../../public/legacy_youth_logo.png";
-import { ContactForm } from "@/components/ContactForms/ContactForm";
 import { PrayerRequestsForm } from "@/components/ContactForms/PrayerRequestsForm";
 import { PraiseReportsForm } from "@/components/ContactForms/PraiseReportsForm";
 
 // export const metadata = {
-//   title: "Legacy Church - MA - Join A Life Group",
-//   description: "Page description"
+//   title: "Legacy Church - MA - Prayer Requests and Praise Reports",
+//   description:
+//     "Submit your prayer requests or share your praise reports with Legacy Church. Join us in our 100 Miracle Challenge!",
+//   keywords:
+//     "prayer requests, praise reports, Legacy Church, 100 Miracle Challenge, faith, community support, testimonies",
+//   author: "Legacy Church",
+//   og: {
+//     title: "Prayer Requests and Praise Reports",
+//     description:
+//       "Share your prayer needs or praise reports with Legacy Church. We believe in the power of prayer and would love to support you.",
+//     image: "/path/to/legacy_youth_banner.jpg", // Update with the correct path to the banner image
+//     url: "https://yourwebsite.com/prayer-request" // Update with your page URL
+//   }
 // };
 
 export default function PrayerRequest() {

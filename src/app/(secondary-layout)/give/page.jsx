@@ -4,8 +4,18 @@ import React from "react";
 import bannerImage from "../../../../public/what_we_believe_banner.jpg";
 
 export const metadata = {
-  title: "Legacy Church - MA - Mission And Vision",
-  description: "Page description"
+  title: "Legacy Church - MA - Giving",
+  description:
+    "Discover the various ways to support Legacy Church through giving and donations. Join us in our mission!",
+  keywords: "Legacy Church, giving, donations, support, online giving, church donations",
+  author: "Legacy Church",
+  og: {
+    title: "Giving - Legacy Church",
+    description:
+      "Support Legacy Church through various giving options. Your generosity helps us serve our community.",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/give"
+  }
 };
 
 export default function Give() {
@@ -18,7 +28,7 @@ export default function Give() {
       />
       <div className="container mx-auto px-10 py-16 flex justify-around text-center gap-10">
         <div className="flex flex-col gap-8">
-          <h2 className="sm:text-6xl text-4xl font-light">Why we give.</h2>
+          <h2 className="sm:text-6xl text-4xl font-light">Why we give</h2>
 
           <hr />
           <p className="max-w-md font-light leading-8">
@@ -62,16 +72,6 @@ export default function Give() {
           <h3 className="text-xl font-bold">Thank you for sowing into Legacy Church!</h3>
         </div>
         <div className="lg:w-1/2 w-full">giving form placeholder</div>
-        {/* <iframe
-          className="lg:w-1/2 w-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2956.235618614395!2d-72.60928698784954!3d42.18802937108935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e6dc31e60da41d%3A0x1b7357ac2f801fac!2sLegacy%20Church!5e0!3m2!1sen!2sus!4v1725772455119!5m2!1sen!2sus"
-          width="800"
-          height="600"
-          // style="border:0;"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe> */}
       </div>
       <ContactForm
         title={"Have questions or need help?"}

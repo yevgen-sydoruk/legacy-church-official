@@ -9,7 +9,18 @@ import { LifeGroupsSignUpForm } from "@/components/ContactForms/LifeGroupsSignUp
 
 export const metadata = {
   title: "Legacy Church - MA - Join A Life Group",
-  description: "Page description"
+  description:
+    "Join a Life Group at Legacy Church to grow in faith and build community. Connect with others this fall semester!",
+  keywords:
+    "Life Groups, Legacy Church, community, faith, small groups, join a life group, fall semester, spiritual growth",
+  author: "Legacy Church",
+  og: {
+    title: "Join A Life Group - Legacy Church",
+    description:
+      "Explore Life Groups at Legacy Church. Sign up to deepen your faith and connect with others in community this fall.",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/join-a-life-group"
+  }
 };
 
 export default function joinALifeGroup() {
@@ -26,11 +37,11 @@ export default function joinALifeGroup() {
           className="w-full aspect-video"
         ></iframe>
       </div>
-      <div className="mx-auto px-10 py-16">
+      {/* <div className="mx-auto px-10 py-16">
         <h2 className="mb-5 lg:text-6xl text-4xl font-[300] text-center lato">
           Meet the Life Group leaders.
         </h2>
-      </div>
+      </div> */}
       <LifeGroupsSignUpForm
         title={"Life Groups Sign-Up Form"}
         text={

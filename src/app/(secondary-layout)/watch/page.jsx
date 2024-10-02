@@ -8,7 +8,17 @@ import YoutubeIcon from "../../../../assets/icons/YoutubeIcon";
 
 export const metadata = {
   title: "Legacy Church - MA - Watch",
-  description: "Page description"
+  description:
+    "Watch our latest sermons and connect with Legacy Church online. Join us for worship and teachings that inspire!",
+  keywords: "Legacy Church, online sermons, watch sermons, YouTube, church services, worship",
+  author: "Legacy Church",
+  og: {
+    title: "Watch Us Online - Legacy Church",
+    description:
+      "Join us for our latest sermons online. Subscribe to our YouTube channel for more content!",
+    image: { legacyYouthLogo },
+    url: "https://legacychurchofficial.com/watch"
+  }
 };
 
 export default function Watch() {

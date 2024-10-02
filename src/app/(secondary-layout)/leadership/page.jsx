@@ -10,7 +10,18 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Legacy Church - MA - Leadership",
-  description: "Page description"
+  description:
+    "Meet the dedicated leadership team of Legacy Church, including our pastors and staff who are committed to serving the community and fostering spiritual growth.",
+  keywords:
+    "Legacy Church, leadership, pastors, church staff, community, faith, spiritual growth, church leaders",
+  author: "Legacy Church",
+  og: {
+    title: "Legacy Church - Meet Our Leadership Team",
+    description:
+      "Discover the passionate leaders at Legacy Church who are committed to guiding and nurturing our community.",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/leadership"
+  }
 };
 
 export default function Leadership() {
@@ -24,7 +35,7 @@ export default function Leadership() {
               src={leader_1}
               width={300}
               height="auto"
-              alt="Picture of the author"
+              alt="Vasily Tokarev photo"
               className=""
             />
           </div>
@@ -51,7 +62,7 @@ export default function Leadership() {
               src={leader_2}
               width={300}
               height="auto"
-              alt="Picture of the author"
+              alt="Aleksandr Tokarev photo"
               className=""
             />
           </div>
@@ -74,13 +85,7 @@ export default function Leadership() {
       <div className="mx-auto w-full flex flex-col md:flex-row p-16 gap-6">
         <div className="flex w-full md:w-[37%] justify-center items-center">
           <div className="relative w-[300px] h-[300px] overflow-hidden text-center">
-            <Image
-              src={leader_3}
-              width={300}
-              height="auto"
-              alt="Picture of the author"
-              className=""
-            />
+            <Image src={leader_3} width={300} height="auto" alt="David Matsuk photo" className="" />
           </div>
         </div>
 
@@ -105,7 +110,7 @@ export default function Leadership() {
               src={leader_4}
               width={300}
               height="auto"
-              alt="Picture of the author"
+              alt="Daniel Orlik Jr. photo"
               className=""
             />
           </div>
@@ -132,7 +137,7 @@ export default function Leadership() {
               src={leader_5}
               width={300}
               height="auto"
-              alt="Picture of the author"
+              alt="Oksana Arbuzov"
               className="absolute -top-20"
             />
           </div>

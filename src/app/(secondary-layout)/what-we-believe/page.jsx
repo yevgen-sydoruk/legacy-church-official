@@ -4,8 +4,18 @@ import React from "react";
 import bannerImage from "../../../../public/what_we_believe_banner-min.jpg";
 
 export const metadata = {
-  title: "Legacy Church - MA - Mission And Vision",
-  description: "Page description"
+  title: "Legacy Church - MA - What We Believe",
+  description:
+    "Explore the core beliefs of Legacy Church, including our understanding of God, salvation, and the role of the church in the community.",
+  keywords:
+    "Legacy Church, core beliefs, what we believe, God, salvation, church, faith, Christian doctrine",
+  og: {
+    title: "Legacy Church - What We Believe",
+    description:
+      "Join us in exploring the core beliefs of Legacy Church and our commitment to the teachings of Jesus Christ.",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/what-we-believe"
+  }
 };
 
 export default function WhatWeBelieve() {

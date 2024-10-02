@@ -35,7 +35,7 @@ export default function Accordion({ accordionData }) {
           </div>
           <div
             className={`px-4 overflow-hidden transition-[max-height] duration-700 ease-in-out ${
-              openIndex === index ? "max-h-40" : "max-h-0"
+              openIndex === index ? "max-h-80" : "max-h-0"
             }`}
           >
             <p className="pb-4">{item.answer}</p>

@@ -11,7 +11,16 @@ import VolunteerBlock from "@/components/VolunteerBlock/VolunteerBlock";
 
 export const metadata = {
   title: "Legacy Church - MA - Home",
-  description: "Page description"
+  description:
+    "Welcome to Legacy Church! Join us for worship, community events, and spiritual growth.",
+  keywords: "Legacy Church, worship, community, volunteer, miracles, service times, baptism",
+  author: "Legacy Church",
+  og: {
+    title: "Welcome to Legacy Church",
+    description: "Experience community, worship, and service at Legacy Church.",
+    // image: { bannerImage },
+    url: "https://legacychurchofficial.com"
+  }
 };
 
 export default function Home() {

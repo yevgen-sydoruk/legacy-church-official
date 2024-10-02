@@ -8,8 +8,18 @@ import Image from "next/image";
 import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
 
 export const metadata = {
-  title: "Legacy Church - MA - Mission And Vision",
-  description: "Page description"
+  title: "Legacy Church - MA - Our Story",
+  description:
+    "Discover the journey of Legacy Church, from its humble beginnings to its vision for the future. Join us as we strive to make a lasting impact in our community.",
+  keywords:
+    "Legacy Church, our story, church history, community, faith, mission, vision, discipleship, growth",
+  og: {
+    title: "Legacy Church - Our Story",
+    description:
+      "Join us on our journey from a small congregation to a thriving community focused on changing the world for Christ.",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/mission-and-vision"
+  }
 };
 
 export default function OurStory() {
@@ -30,7 +40,7 @@ export default function OurStory() {
           src={ourStoryPhoto1}
           width={400}
           height={400}
-          alt="Picture of the author"
+          alt="Picture of the meeting in Agawam, MA"
           className="w-full md:w-1/2 max-w-lg"
         />
       </div>
@@ -39,7 +49,7 @@ export default function OurStory() {
           src={ourStoryPhoto2}
           width={500}
           height={500}
-          alt="Picture of the author"
+          alt="Picture of the new church in Chicopee, MA"
           className="w-full md:w-1/2 order-2 md:order-1 max-w-lg"
         />
         <div className="w-full md:w-1/2 order-1 md:order-2">
@@ -65,7 +75,7 @@ export default function OurStory() {
           src={ourStoryPhoto3}
           width={500}
           height={500}
-          alt="Picture of the author"
+          alt="Picture of the new disciples growing in fellowship"
           className="w-full md:w-1/2 max-w-lg"
         />
       </div>

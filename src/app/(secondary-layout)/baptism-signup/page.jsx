@@ -6,8 +6,18 @@ import Link from "next/link";
 import { BaptismSignUpForm } from "@/components/ContactForms/BaptismSignUpForm";
 
 export const metadata = {
-  title: "Legacy Church - MA - Mission And Vision",
-  description: "Page description"
+  title: "Legacy Church - MA - Baptism Sign-Up",
+  description:
+    "Sign up for baptism at Legacy Church. Join us in following Jesus' command to be baptized.",
+  keywords: "baptism, Legacy Church, sign-up, Christian, faith",
+  author: "Legacy Church",
+  og: {
+    title: "Baptism Sign-Up - Legacy Church",
+    description:
+      "Ready to take the next step in your faith journey? Sign up for baptism at Legacy Church.",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/baptism-signup"
+  }
 };
 
 export default function BaptismSignup() {

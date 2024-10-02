@@ -7,8 +7,19 @@ import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
 import { ContactForm } from "@/components/ContactForms/ContactForm";
 
 export const metadata = {
-  title: "Legacy Church - MA - Mission And Vision",
-  description: "Page description"
+  title: "Legacy Church - MA - Legacy Youth",
+  description:
+    "Join Legacy Youth at Legacy Church to encounter God and explore your identity in Christ. Discover your potential and engage with a vibrant community of young people.",
+  keywords:
+    "Legacy Youth, youth ministry, youth community, faith, identity in Christ, youth camp, Legacy Church",
+  author: "Legacy Church",
+  og: {
+    title: "Legacy Youth - Legacy Church",
+    description:
+      "Discover the mission of Legacy Youth at Legacy Church and join a community dedicated to empowering young people to live out their faith.",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/legacy-youth"
+  }
 };
 
 export default function LegacyYouth() {

@@ -8,8 +8,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-// import "./styles.css";
-
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 
@@ -39,15 +37,14 @@ export default function MiraclesChallengeBlock() {
             </Link>
           </div>
         </div>
-        <div className="w-full ">
+        <div className="w-full">
           <Swiper
             spaceBetween={30}
             style={{
               "--swiper-navigation-color": "#fff",
               "--swiper-pagination-color": "#fff"
             }}
-            autoHeight={true}
-            centeredSlides={true}
+            autoHeight={false}
             autoplay={{
               delay: 5000,
               disableOnInteraction: true
@@ -58,23 +55,23 @@ export default function MiraclesChallengeBlock() {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="bg-[#3498db] text-center text-white items-center justify-center"
+            className="bg-[#3498db] text-white text-center"
           >
-            <SwiperSlide className="p-20">
+            <SwiperSlide className="p-10 my-auto">
               <h3 className="sm:text-xl text-lg pb-5">Praise Report #30</h3>
               <p className="lg:text-5xl text-3xl font-extralight">
                 My daughter hasn't spoken to me in 4 years. She called me on the phone last week and
                 we had a nice conversation. Praise God!
               </p>
             </SwiperSlide>
-            <SwiperSlide className="p-20">
+            <SwiperSlide className="p-10 my-auto">
               <h3 className="sm:text-xl text-lg pb-5">Praise Report #29</h3>
               <p className="lg:text-5xl text-3xl font-extralight">
                 After Outpour Prayer Night, the Lord blessed and touched my heart. I felt called to
                 start serving at church.
               </p>
             </SwiperSlide>
-            <SwiperSlide className="p-20">
+            <SwiperSlide className="p-10 my-auto">
               <h3 className="sm:text-xl text-lg pb-5">Praise Report #28</h3>
               <p className="lg:text-5xl text-3xl font-extralight">
                 I've always been ashamed of my identity which makes me struggle with self esteem. At
@@ -82,7 +79,7 @@ export default function MiraclesChallengeBlock() {
                 myself to people because I felt no shame anymore.
               </p>
             </SwiperSlide>
-            <SwiperSlide className="p-20">
+            <SwiperSlide className="p-10 my-auto">
               <h3 className="sm:text-xl text-lg pb-5">Praise Report #27</h3>
               <p className="lg:text-5xl text-3xl font-extralight">
                 God showed up for my family and granted us victory in a judicial fight.

@@ -7,7 +7,7 @@ export default function CafeBlock() {
       <div className="bg-black-overlay">
         <div className="flex flex-col items-start pb-28 pt-28 px-10 gap-10 font-bold leading-7">
           <h2 className="max-w-[500px] sm:text-7xl text-5xl font-extrabold uppercase">
-            Fellowship At Legacy Cafe.
+            Fellowship At Legacy Cafe
           </h2>
           <hr className="w-full" />
           <p className="max-w-lg">
@@ -30,13 +30,13 @@ export default function CafeBlock() {
               className="text-[#3498db] link-decoration-underline"
               href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_X2WRGF&hl=en_US"
             >
-              Legacy Church Official App for Android,<br></br>{" "}
+              Legacy Church Official App for Android<br></br>{" "}
             </Link>
             MOBILE ORDER AVAILABLE.
           </p>
           <Link
             className="py-2 px-4 border border-[#3498db] rounded-md text-2xl text-white text-center transition-all shadow-sm hover:shadow-lg  hover:text-white hover:bg-[#3498db] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase"
-            href="#"
+            href="legacy-cafe"
           >
             Learn more about cafe
           </Link>

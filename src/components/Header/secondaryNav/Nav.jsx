@@ -38,7 +38,11 @@ export default function Nav({ onLinkClick }) {
             <h3 className="mb-4 text-2xl">About</h3>
             <ul className="flex flex-col gap-2">
               <li>
-                <Link className="hover:text-[#3498db]" href="/mission" onClick={onLinkClick}>
+                <Link
+                  className="hover:text-[#3498db]"
+                  href="/mission-and-vision"
+                  onClick={onLinkClick}
+                >
                   Mission & Vision
                 </Link>
               </li>
@@ -104,7 +108,7 @@ export default function Nav({ onLinkClick }) {
           </div>
           <div className="row-span-1 md:order-3 order-2">
             <Link
-              className="hover:bg-[#3498db] hover:text-gray-50 transition-all p-2 border-2 rounded-lg hover:border-[#3498db] text-balance text-2xl"
+              className="hover:bg-[#3498db] hover:text-gray-50 transition-all p-2 sm:border-2 sm:rounded-lg hover:border-[#3498db] text-balance text-2xl"
               href="/give"
               onClick={onLinkClick}
             >

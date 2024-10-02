@@ -9,8 +9,19 @@ import Link from "next/link";
 import Accordion from "../../../components/Accordion/Accordion";
 
 export const metadata = {
-  title: "Legacy Church - MA - Mission And Vision",
-  description: "Page description"
+  title: "Legacy Church - MA - Volunteer",
+  description:
+    "Discover volunteer opportunities at Legacy Church. Use your gifts to serve the community and grow in your faith.",
+  keywords:
+    "volunteer, Legacy Church, community service, church volunteering, serve, opportunities, ministry, faith",
+  author: "Legacy Church",
+  og: {
+    title: "Volunteer at Legacy Church",
+    description:
+      "Join our volunteer team and use your unique gifts to serve the community. Explore various opportunities to get involved!",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/volunteer"
+  }
 };
 
 export default function Volunteer() {

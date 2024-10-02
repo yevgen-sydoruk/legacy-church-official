@@ -5,11 +5,21 @@ import bannerImage from "../../../../public/lil_legacy_banner.jpg";
 import lilLegacy1 from "../../../../public/lil_Legacy_Gallery/lil_legacy_1.jpg";
 import lilLegacy2 from "../../../../public/lil_Legacy_Gallery/lil_legacy_2.jpg";
 import lilLegacy3 from "../../../../public/lil_Legacy_Gallery/lil_legacy_3.jpg";
-import Image from "next/image";
 
 export const metadata = {
-  title: "Legacy Church - MA - Mission And Vision",
-  description: "Page description"
+  title: "Legacy Church - MA - Lil' Legacy",
+  description:
+    "Lil' Legacy at Legacy Church teaches and equips children in their faith journey. Join us as we support families in their spiritual growth!",
+  keywords:
+    "Lil' Legacy, children's ministry, Legacy Tots, nursery, spiritual growth, Legacy Church, kids church, Matthew 19:14",
+  author: "Legacy Church",
+  og: {
+    title: "Lil' Legacy - Legacy Church",
+    description:
+      "Discover the mission of Lil' Legacy, dedicated to teaching children about Jesus and supporting families in their spiritual journeys.",
+    image: { bannerImage },
+    url: "https://legacychurchofficial.com/lil-legacy"
+  }
 };
 
 export default function LilLegacy() {
@@ -53,7 +63,7 @@ export default function LilLegacy() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto px-10 py-16 justify-items-center">
         <div
           className="relative w-full h-[300px] overflow-hidden bg-cover bg-center transition-transform duration-300 hover:scale-105"
-          style={{ backgroundImage: `url(${lilLegacy1.src})` }} // Ensure .src is used for Next.js Image
+          style={{ backgroundImage: `url(${lilLegacy1.src})` }}
         ></div>
         <div
           className="relative w-full h-[300px] overflow-hidden bg-cover bg-center transition-transform duration-300 hover:scale-105"
