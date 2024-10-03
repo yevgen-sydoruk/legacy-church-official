@@ -168,7 +168,10 @@ export default function LegacyCafe() {
       </div>
       <div className="flex justify-center py-8 text-3xl font-bold">
         <Link href="https://www.instagram.com/legacy.church.cafe/" passHref legacyBehavior>
-          <a target="_blank" className="flex gap-4 items-center text-[#3498db] hover:text-cyan-700">
+          <a
+            target="_blank"
+            className="flex flex-col text-center gap-4 items-center text-[#3498db] hover:text-cyan-700"
+          >
             Follow LEGACY Cafe on Instagram
             <InstagramIcon styles="fill-[#3498db] hover:fill-cyan-700" />
           </a>

@@ -25,7 +25,7 @@ export default function Watch() {
   return (
     <section className="pt-[120px]">
       <Banner heading={"Watch Us Online"} text={""} bannerImage={legacyYouthLogo} />
-      <div className="mx-auto px-10 py-16">
+      <div className="mx-auto px-10 py-8">
         <h2 className="lg:text-6xl text-4xl font-[300] text-center lato">
           Watch Our Latest Sermon
         </h2>
@@ -46,7 +46,10 @@ export default function Watch() {
           passHref
           legacyBehavior
         >
-          <a target="_blank" className="flex gap-4 items-center text-[#3498db] hover:text-cyan-700">
+          <a
+            target="_blank"
+            className="flex flex-col text-center gap-4 items-center text-[#3498db] hover:text-cyan-700"
+          >
             Watch us online on YouTube
             <YoutubeIcon styles="fill-[#3498db] hover:fill-cyan-700" />
           </a>

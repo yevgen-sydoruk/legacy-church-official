@@ -95,8 +95,12 @@ export default function Nav({ onLinkClick }) {
                 </Link>
               </li>
               <li>
-                <Link className="hover:text-[#3498db]" href="/prayer-request" onClick={onLinkClick}>
-                  Prayer Request
+                <Link
+                  className="hover:text-[#3498db]"
+                  href="/miracle-challenge"
+                  onClick={onLinkClick}
+                >
+                  Miracle Challenge
                 </Link>
               </li>
               <li>

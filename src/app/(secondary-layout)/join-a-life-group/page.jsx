@@ -2,9 +2,6 @@ import Banner from "@/components/Banner/Banner";
 import React from "react";
 import bannerImage from "../../../../public/legacy_youth_banner.jpg";
 import legacyYouthLogo from "../../../../public/legacy_youth_logo.png";
-import Image from "next/image";
-import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
-import { ContactForm } from "@/components/ContactForms/ContactForm";
 import { LifeGroupsSignUpForm } from "@/components/ContactForms/LifeGroupsSignUpForm";
 
 export const metadata = {
@@ -37,11 +34,6 @@ export default function joinALifeGroup() {
           className="w-full aspect-video"
         ></iframe>
       </div>
-      {/* <div className="mx-auto px-10 py-16">
-        <h2 className="mb-5 lg:text-6xl text-4xl font-[300] text-center lato">
-          Meet the Life Group leaders.
-        </h2>
-      </div> */}
       <LifeGroupsSignUpForm
         title={"Life Groups Sign-Up Form"}
         text={

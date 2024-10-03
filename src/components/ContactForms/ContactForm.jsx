@@ -44,7 +44,7 @@ export function ContactForm({ title, text, sentFromPage }) {
           });
         } else {
           setIsLoading(false);
-          console.log("Email/Password is invalid.");
+          // console.log("Email/Password is invalid.");
           toast.error("Server Issue! please try again later", {
             position: "top-right",
             autoClose: 0,

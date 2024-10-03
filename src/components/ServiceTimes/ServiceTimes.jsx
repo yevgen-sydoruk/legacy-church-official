@@ -26,6 +26,7 @@ export default function ServiceTimes() {
       </div>
       <iframe
         className="lg:w-1/2 w-full"
+        title="Legacy Church location on Google Maps"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2956.235618614395!2d-72.60928698784954!3d42.18802937108935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e6dc31e60da41d%3A0x1b7357ac2f801fac!2sLegacy%20Church!5e0!3m2!1sen!2sus!4v1725772455119!5m2!1sen!2sus"
         width="800"
         height="600"
