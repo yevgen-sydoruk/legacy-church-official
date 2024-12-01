@@ -1,10 +1,10 @@
 import Banner from "@/components/Banner/Banner";
 import { ContactForm } from "@/components/ContactForms/ContactForm";
 import React from "react";
-import bannerImage from "../../../../public/what_we_believe_banner.jpg";
+import bannerImage from "../../../../public/give_banner.jpg";
 
 export const metadata = {
-  title: "Legacy Church - MA - Giving",
+  title: "Legacy Church - Giving",
   description:
     "Discover the various ways to support Legacy Church through giving and donations. Join us in our mission!",
   keywords: "Legacy Church, giving, donations, support, online giving, church donations",

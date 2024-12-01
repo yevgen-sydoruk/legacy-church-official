@@ -10,7 +10,7 @@ import { ContactForm } from "@/components/ContactForms/ContactForm";
 import VolunteerBlock from "@/components/VolunteerBlock/VolunteerBlock";
 
 export const metadata = {
-  title: "Legacy Church - MA - Home",
+  title: "Legacy Church - Home",
   description:
     "Welcome to Legacy Church! Join us for worship, community events, and spiritual growth.",
   keywords: "Legacy Church, worship, community, volunteer, miracles, service times, baptism",

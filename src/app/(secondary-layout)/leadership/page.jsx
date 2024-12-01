@@ -9,7 +9,7 @@ import leader_5 from "../../../../public/leadership_Oksana_Arbuzov.jpg";
 import Image from "next/image";
 
 export const metadata = {
-  title: "Legacy Church - MA - Leadership",
+  title: "Legacy Church - Leadership",
   description:
     "Meet the dedicated leadership team of Legacy Church, including our pastors and staff who are committed to serving the community and fostering spiritual growth.",
   keywords:

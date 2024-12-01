@@ -12,14 +12,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // <html lang="en">
-    // <body className={inter.className} suppressHydrationWarning={true}>
     <div className="">
       <Header isHome={true} />
       {children}
       <Footer />
     </div>
-    // </body>
-    // </html>
   );
 }

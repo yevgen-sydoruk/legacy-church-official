@@ -4,7 +4,7 @@ import bannerImage from "../../../../public/legacy_youth_logo.png";
 import { ConnectCardForm } from "@/components/ContactForms/ConnectCardForm";
 
 export const metadata = {
-  title: "Legacy Church - MA - Connect Card",
+  title: "Legacy Church - Connect Card",
   description:
     "Fill out our Connect Card to get involved with Legacy Church and stay updated on our activities.",
   keywords: "Legacy Church, connect card, community, get involved, church events",

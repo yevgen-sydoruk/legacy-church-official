@@ -7,7 +7,7 @@ import lilLegacy2 from "../../../../public/lil_Legacy_Gallery/lil_legacy_2.jpg";
 import lilLegacy3 from "../../../../public/lil_Legacy_Gallery/lil_legacy_3.jpg";
 
 export const metadata = {
-  title: "Legacy Church - MA - Lil' Legacy",
+  title: "Legacy Church - Lil' Legacy",
   description:
     "Lil' Legacy at Legacy Church teaches and equips children in their faith journey. Join us as we support families in their spiritual growth!",
   keywords:

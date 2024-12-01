@@ -5,7 +5,7 @@ import legacyYouthLogo from "../../../../public/legacy_youth_logo.png";
 import { LifeGroupsSignUpForm } from "@/components/ContactForms/LifeGroupsSignUpForm";
 
 export const metadata = {
-  title: "Legacy Church - MA - Join A Life Group",
+  title: "Legacy Church - Join A Life Group",
   description:
     "Join a Life Group at Legacy Church to grow in faith and build community. Connect with others this fall semester!",
   keywords:

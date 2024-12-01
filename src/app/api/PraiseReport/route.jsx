@@ -72,11 +72,5 @@ export async function POST(req) {
   } catch (err) {
     console.error("Error in processing request:", err);
     return new NextResponse("Failed to send message.", { status: 500 });
-    // return new Response(JSON.stringify({ status: "Internal Server Error", error: err.message }), {
-    //   status: 500,
-    //   headers: {
-    //     "Content-Type": "application/json"
-    //   }
-    // });
   }
 }

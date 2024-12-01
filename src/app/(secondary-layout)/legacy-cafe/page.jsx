@@ -10,7 +10,7 @@ import InstagramIcon from "../../../../assets/icons/InstagramIcon";
 import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
 
 export const metadata = {
-  title: "Legacy Church - MA - Legacy Cafe",
+  title: "Legacy Church - Legacy Cafe",
   description:
     "Join us at Legacy Cafe for specialty coffee, fellowship, and a welcoming community. Enjoy free drinks for first-time visitors!",
   keywords:

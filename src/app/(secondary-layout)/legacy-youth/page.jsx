@@ -7,7 +7,7 @@ import ServiceTimes from "@/components/ServiceTimes/ServiceTimes";
 import { ContactForm } from "@/components/ContactForms/ContactForm";
 
 export const metadata = {
-  title: "Legacy Church - MA - Legacy Youth",
+  title: "Legacy Church - Legacy Youth",
   description:
     "Join Legacy Youth at Legacy Church to encounter God and explore your identity in Christ. Discover your potential and engage with a vibrant community of young people.",
   keywords:

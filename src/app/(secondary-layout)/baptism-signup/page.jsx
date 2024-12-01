@@ -1,12 +1,10 @@
 import Banner from "@/components/Banner/Banner";
-import { ContactForm } from "@/components/ContactForms/ContactForm";
 import React from "react";
 import bannerImage from "../../../../public/legacy_youth_logo.png";
-import Link from "next/link";
 import { BaptismSignUpForm } from "@/components/ContactForms/BaptismSignUpForm";
 
 export const metadata = {
-  title: "Legacy Church - MA - Baptism Sign-Up",
+  title: "Legacy Church - Baptism Sign-Up",
   description:
     "Sign up for baptism at Legacy Church. Join us in following Jesus' command to be baptized.",
   keywords: "baptism, Legacy Church, sign-up, Christian, faith",
