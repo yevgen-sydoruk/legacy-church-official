@@ -1,5 +1,5 @@
 import React from "react";
-import FormsToggle from "./formsToggle";
+import FormsToggle from "./FormsToggle";
 import bannerImage from "../../../../public/legacy_youth_banner.jpg";
 
 export const metadata = {
