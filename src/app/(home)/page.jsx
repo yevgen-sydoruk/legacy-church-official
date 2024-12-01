@@ -9,6 +9,8 @@ import WatchService from "@/components/WatchService/WatchService";
 import { ContactForm } from "@/components/ContactForms/ContactForm";
 import VolunteerBlock from "@/components/VolunteerBlock/VolunteerBlock";
 
+import LiveBanner from "@/components/LiveBanner/LiveBanner";
+
 export const metadata = {
   title: "Legacy Church - Home",
   description:
@@ -20,12 +22,14 @@ export const metadata = {
     description: "Experience community, worship, and service at Legacy Church.",
     // image: { bannerImage },
     url: "https://legacychurchofficial.com"
-  }
+  },
+  canonical: "https://legacychurchofficial.com"
 };
 
 export default function Home() {
   return (
     <main>
+      <LiveBanner />
       <Hero />
       <Welcome />
       <MiraclesChallengeBlock />

@@ -49,9 +49,9 @@ export default function Leadership() {
             space where people can encounter the presence of God and the active work of the Holy
             Spirit. He remains involved at Legacy Church as a pastor and mentor.
           </p>
-          <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
+          {/* <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
             Contact
-          </button>
+          </button> */}
         </div>
       </div>
       <hr />
@@ -76,9 +76,9 @@ export default function Leadership() {
             years until he could no longer ignore God's call to pastoral ministry. He has been
             serving Legacy Church as lead pastor since 2017.
           </p>
-          <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
+          {/* <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
             Contact
-          </button>
+          </button> */}
         </div>
       </div>
       <hr />
@@ -97,9 +97,9 @@ export default function Leadership() {
             come to know Jesus. He became an ordained Youth Pastor in 2020 and serves the Legacy
             Youth with his wife, Loredana.
           </p>
-          <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
+          {/* <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
             Contact
-          </button>
+          </button> */}
         </div>
       </div>
       <hr />
@@ -124,9 +124,9 @@ export default function Leadership() {
             became an ordained Worship Pastor in 2020, and serves alongside his wife, Alvina, and
             Legacy's faithful worship community.
           </p>
-          <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
+          {/* <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
             Contact
-          </button>
+          </button> */}
         </div>
       </div>
       <hr />
@@ -150,10 +150,9 @@ export default function Leadership() {
             Oksana's passion for people and our teams has been a catalyst for her administrative
             skills. If you are looking to get plugged in, she's the ones you'll want to see!
           </p>
-          <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
+          {/* <button className="rounded-md border bg-[#3498db] py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-white hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase">
             Contact
-          </button>
-          {/* oksana.a1017@gmail.com <oksana.a1017@gmail.com>; */}
+          </button> */}
         </div>
       </div>
     </section>
