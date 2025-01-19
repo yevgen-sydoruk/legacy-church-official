@@ -1,14 +1,14 @@
-// pages/api/videos.js
+// src/app/api/videos/route.js
 import axios from "axios";
 
 let cachedVideos = null;
 let cacheTimestamp = null;
 
-export default async function handler(req, res) {
+export async function GET() {
   const CACHE_DURATION = 60 * 60 * 1000; // 1 hour in milliseconds
 
   if (cachedVideos && Date.now() - cacheTimestamp < CACHE_DURATION) {
-    return res.status(200).json(cachedVideos);
+    return new Response(JSON.stringify(cachedVideos), { status: 200 });
   }
 
   try {
@@ -27,9 +27,9 @@ export default async function handler(req, res) {
     cachedVideos = response.data;
     cacheTimestamp = Date.now();
 
-    res.status(200).json(cachedVideos);
+    return new Response(JSON.stringify(cachedVideos), { status: 200 });
   } catch (error) {
     console.error("Error fetching YouTube videos:", error);
-    res.status(500).json({ error: "Failed to fetch videos." });
+    return new Response(JSON.stringify({ error: "Failed to fetch videos." }), { status: 500 });
   }
 }
