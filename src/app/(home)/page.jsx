@@ -26,7 +26,23 @@ export const metadata = {
   canonical: "https://legacychurchofficial.com"
 };
 
-export default function Home() {
+async function fetchVideos() {
+  try {
+    const response = await fetch(
+      `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&eventType=completed&type=video&maxResults=4&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_KEY}`,
+      { next: { revalidate: 86400 } } // Revalidate every 24 hours
+    );
+    const data = await response.json();
+    return data.items || [];
+  } catch (error) {
+    console.error("Failed to fetch YouTube videos:", error);
+    return [];
+  }
+}
+
+export default async function Home() {
+  const videos = await fetchVideos();
+
   return (
     <main>
       <LiveBanner />
@@ -35,7 +51,7 @@ export default function Home() {
       <MiraclesChallengeBlock />
       <VolunteerBlock />
       <ServiceTimes />
-      <WatchService />
+      <WatchService videos={videos} />
       <UkraineRelief />
       <CafeBlock />
       <ContactForm

@@ -1,28 +1,10 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 
-export default function WatchService() {
-  const [video, setVideo] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchVideo = async () => {
-      try {
-        const response = await fetch("/api/VideosYoutube");
-
-        const data = await response.json();
-        setVideo(data.items?.[0]); // Get the latest video
-      } catch (error) {
-        console.error("Error fetching video:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchVideo();
-  }, []);
+export default function WatchService({ videos }) {
+  const video = videos?.[0]; // Get the latest video
 
   const formatDate = dateString => {
     if (!dateString) return "Unknown Date";
@@ -42,9 +24,7 @@ export default function WatchService() {
       </div>
 
       <div className="mx-auto px-10 py-8 items-center text-center gap-5">
-        {loading ? (
-          <p>Loading video...</p>
-        ) : video ? (
+        {video ? (
           <div className="flex flex-col items-center">
             <iframe
               src={`https://www.youtube.com/embed/${video.id?.videoId}`}
