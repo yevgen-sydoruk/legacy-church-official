@@ -1,37 +1,25 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-// import legacyYouthLogo from "../../../../public/legacy_youth_logo.png";
-// import Link from "next/link";
-// import YoutubeIcon from "../../../../assets/icons/YoutubeIcon";
 
-export default function WatchService() {
+export default function LatestVideosBlock() {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchLiveVideos = async () => {
+    const fetchVideos = async () => {
       try {
-        const response = await axios.get("https://www.googleapis.com/youtube/v3/search", {
-          params: {
-            part: "snippet",
-            channelId: process.env.NEXT_PUBLIC_CHANNEL_ID, // Channel ID
-            eventType: "completed", // Completed live events
-            type: "video", // Only video results
-            maxResults: 4, // Get last 4 live videos
-            order: "date",
-            key: process.env.NEXT_PUBLIC_YOUTUBE_KEY // YouTube Data API key
-          }
-        });
-        setVideos(response.data.items);
+        const response = await fetch("/api/videos"); // Fetch from backend API
+        const data = await response.json();
+        setVideos(data.items); // Extract video data
       } catch (error) {
-        console.error("Error fetching live videos:", error);
+        console.error("Error fetching videos:", error);
       } finally {
         setLoading(false);
       }
     };
-    fetchLiveVideos();
+
+    fetchVideos();
   }, []);
 
   // Function to format the date
@@ -47,12 +35,12 @@ export default function WatchService() {
 
   return (
     <div>
-      {/* Display YouTube Video */}
+      {/* Display YouTube Videos */}
       <div className="mx-auto px-10 py-8 items-center text-center gap-5">
         {loading ? (
           <p>Loading Latest Sermon videos...</p>
-        ) : (
-          <div className="grid  sm:grid-cols-1 lg:grid-cols-2 gap-10">
+        ) : videos.length > 0 ? (
+          <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-10">
             {videos.map(video => (
               <div key={video.id.videoId} className="flex flex-col items-center">
                 <iframe
@@ -70,6 +58,8 @@ export default function WatchService() {
               </div>
             ))}
           </div>
+        ) : (
+          <p>No videos available at the moment.</p>
         )}
       </div>
     </div>

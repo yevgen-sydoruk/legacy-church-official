@@ -2,6 +2,7 @@ import Banner from "@/components/Banner/Banner";
 import { ContactForm } from "@/components/ContactForms/ContactForm";
 import React from "react";
 import bannerImage from "../../../../public/give_banner.jpg";
+import Link from "next/link";
 
 export const metadata = {
   title: "Legacy Church - Giving",
@@ -42,36 +43,45 @@ export default function Give() {
       <div className="bg-[#3498db] lg:flex justify-center text-white">
         <div className="lg:w-1/2 text-center lg:text-left w-full flex flex-col gap-5 p-10">
           <h2 className="sm:text-6xl text-4xl text-center">Ways To Give</h2>
+          <Link
+            // className="rounded-md border border-[#3498db] py-2 px-4 text-center text-2xl transition-all shadow-sm hover:shadow-lg hover:text-white hover:bg-[#3498db] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none uppercase"
+            className="rounded-md border border-[#3498db] bg-white py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-[#3498db] hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase"
+            href="https://www.kindridgiving.com/app/giving/kindrid-pd7n34q"
+          >
+            donate now
+          </Link>
           <hr />
           <div className="">
-            <h3 className="text-xl font-bold">Our Website/ App</h3>
-            <p className="text-lg">
+            <h3 className="text-xl font-bold text-center">Our Website/ App</h3>
+            <p className="text-lg text-center">
               Set up your account to give right here through our website or mobile app! Choose the
               amount and frequency to your convenience and never miss the opportunity to give.{" "}
             </p>
           </div>
           <div className="">
-            <h3 className="text-xl font-bold">Text to Give</h3>
-            <p className="text-lg">
+            <h3 className="text-xl font-bold text-center">Text to Give</h3>
+            <p className="text-lg text-center">
               We make giving as easy as sending a text! Text "give" to 413-650-6050 to give right
               from your phone!
             </p>
           </div>
           <div className="">
-            <h3 className="text-xl font-bold">Give in Person</h3>
-            <p className="text-lg">
+            <h3 className="text-xl font-bold text-center">Give in Person</h3>
+            <p className="text-lg text-center">
               Drop off any donations or entries in the wooden drop box located in the lobby. Please
               make any checks payable to "Legacy Church."
             </p>
           </div>
           <div className="">
-            <h3 className="text-xl font-bold">Mail It</h3>
-            <p className="text-lg">Send gift to 780 Chicopee St, Chicopee, MA 01013.</p>
+            <h3 className="text-xl font-bold text-center">Mail It</h3>
+            <p className="text-lg text-center">Send gift to 780 Chicopee St, Chicopee, MA 01013.</p>
           </div>
 
-          <h3 className="text-xl font-bold">Thank you for sowing into Legacy Church!</h3>
+          <h3 className="text-xl font-bold text-center">
+            Thank you for sowing into Legacy Church!
+          </h3>
         </div>
-        <div className="lg:w-1/2 w-full">giving form placeholder</div>
+        {/* <div className="lg:w-1/2 w-full">giving form placeholder</div> */}
       </div>
       <ContactForm
         title={"Have questions or need help?"}

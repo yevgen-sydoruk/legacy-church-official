@@ -1,40 +1,30 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import Link from "next/link";
 
 export default function WatchService() {
-  const [videos, setVideos] = useState([]);
+  const [video, setVideo] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const fetchLiveVideos = async () => {
+    const fetchVideo = async () => {
       try {
-        const response = await axios.get("https://www.googleapis.com/youtube/v3/search", {
-          params: {
-            part: "snippet",
-            channelId: process.env.NEXT_PUBLIC_CHANNEL_ID, // Channel ID
-            eventType: "completed", // Completed live events
-            type: "video", // Only video results
-            maxResults: 4, // Get the last 4 videos
-            order: "date", // Sort by date
-            key: process.env.NEXT_PUBLIC_YOUTUBE_KEY // YouTube Data API key
-          }
-        });
-
-        setVideos(response.data.items); // Set the video data
+        const response = await fetch("/api/videos");
+        const data = await response.json();
+        setVideo(data.items?.[0]); // Get the latest video
       } catch (error) {
-        console.error("Error fetching live videos:", error);
+        console.error("Error fetching video:", error);
       } finally {
         setLoading(false);
       }
     };
-    fetchLiveVideos();
+
+    fetchVideo();
   }, []);
 
-  // Function to format the date
   const formatDate = dateString => {
+    if (!dateString) return "Unknown Date";
     const date = new Date(dateString);
     return new Intl.DateTimeFormat("en-US", {
       weekday: "short",
@@ -50,29 +40,24 @@ export default function WatchService() {
         <h2 className="sm:text-6xl text-4xl">Watch Sunday Service Live</h2>
       </div>
 
-      {/* Display the latest 4 live videos */}
       <div className="mx-auto px-10 py-8 items-center text-center gap-5">
         {loading ? (
-          <p>Loading live videos...</p>
-        ) : (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-            {videos.map(video => (
-              <div key={video.id.videoId} className="flex flex-col items-center">
-                <iframe
-                  src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                  title={video.snippet.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                  className="w-full aspect-video"
-                ></iframe>
-                <p className="mt-4 text-lg font-bold">{video.snippet.title}</p>
-                <p className="mt-2 text-sm text-gray-500">
-                  {formatDate(video.snippet.publishedAt)}
-                </p>
-              </div>
-            ))}
+          <p>Loading video...</p>
+        ) : video ? (
+          <div className="flex flex-col items-center">
+            <iframe
+              src={`https://www.youtube.com/embed/${video.id?.videoId}`}
+              title={video.snippet?.title || "YouTube Video"}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              className="w-full aspect-video"
+            ></iframe>
+            <p className="mt-4 text-lg font-bold">{video.snippet?.title || "Untitled Video"}</p>
+            <p className="mt-2 text-sm text-gray-500">{formatDate(video.snippet?.publishedAt)}</p>
           </div>
+        ) : (
+          <p>No video available.</p>
         )}
       </div>
 
