@@ -2,9 +2,10 @@
 
 import React from "react";
 import Link from "next/link";
+import { useAppContext } from "@/context/index"; // Use context to access videos
 
 export default function WatchService() {
-  const { videos, loading } = useVideos();
+  const { videos, loading } = useAppContext();
 
   const formatDate = dateString => {
     if (!dateString) return "Unknown Date";

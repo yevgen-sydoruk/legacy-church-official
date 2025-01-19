@@ -8,7 +8,6 @@ import UkraineRelief from "@/components/UkraineRelief/UkraineRelief";
 import WatchService from "@/components/WatchService/WatchService";
 import { ContactForm } from "@/components/ContactForms/ContactForm";
 import VolunteerBlock from "@/components/VolunteerBlock/VolunteerBlock";
-
 import LiveBanner from "@/components/LiveBanner/LiveBanner";
 
 export const metadata = {
@@ -26,22 +25,8 @@ export const metadata = {
   canonical: "https://legacychurchofficial.com"
 };
 
-async function fetchVideos() {
-  try {
-    const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${process.env.NEXT_PUBLIC_CHANNEL_ID}&eventType=completed&type=video&maxResults=4&order=date&key=${process.env.NEXT_PUBLIC_YOUTUBE_KEY}`,
-      { next: { revalidate: 86400 } } // Revalidate every 24 hours
-    );
-    const data = await response.json();
-    return data.items || [];
-  } catch (error) {
-    console.error("Failed to fetch YouTube videos:", error);
-    return [];
-  }
-}
-
-export default async function Home() {
-  const videos = await fetchVideos();
+export default function Home() {
+  // const { videos, loading } = useAppContext();
 
   return (
     <main>
@@ -51,7 +36,7 @@ export default async function Home() {
       <MiraclesChallengeBlock />
       <VolunteerBlock />
       <ServiceTimes />
-      <WatchService videos={videos} />
+      <WatchService />
       <UkraineRelief />
       <CafeBlock />
       <ContactForm

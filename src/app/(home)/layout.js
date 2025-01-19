@@ -12,7 +12,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <div className="">
+    <div>
       <Header isHome={true} />
       {children}
       <Footer />

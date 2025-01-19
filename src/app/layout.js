@@ -4,6 +4,7 @@ import "react-toastify/ReactToastify.min.css";
 import "../../pe-icon-7-stroke/css/pe-icon-7-stroke.css";
 import "../../pe-icon-7-stroke/css/helper.css";
 import { Analytics } from "@vercel/analytics/next";
+import { AppWrapper } from "@/context"; // Import VideosProvider
 
 const lato_init = Lato({
   subsets: ["latin"],
@@ -20,8 +21,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`scroll-smooth ${lato_init.variable}`}>
       <body>
-        {children}
-        <Analytics />
+        <AppWrapper>
+          {children}
+          <Analytics />
+        </AppWrapper>
       </body>
     </html>
   );

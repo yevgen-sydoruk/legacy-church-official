@@ -1,10 +1,12 @@
+"use client";
+
 import React, { createContext, useState, useContext, useEffect } from "react";
 
 // Create Context
-const VideosContext = createContext();
+const AppContext = createContext();
 
 // Provider component
-export const VideosProvider = ({ children }) => {
+export function AppWrapper({ children }) {
   const [videos, setVideos] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -14,6 +16,7 @@ export const VideosProvider = ({ children }) => {
         const response = await fetch("/api/VideosYoutube");
         const data = await response.json();
         setVideos(data.items); // Store all 4 videos in state
+        console.log(videos);
       } catch (error) {
         console.error("Error fetching videos:", error);
       } finally {
@@ -24,10 +27,10 @@ export const VideosProvider = ({ children }) => {
     fetchVideos();
   }, []);
 
-  return <VideosContext.Provider value={{ videos, loading }}>{children}</VideosContext.Provider>;
-};
+  return <AppContext.Provider value={{ videos, loading }}>{children}</AppContext.Provider>;
+}
 
 // Custom hook to use the Videos context
-export const useVideos = () => {
-  return useContext(VideosContext);
-};
+export function useAppContext() {
+  return useContext(AppContext);
+}

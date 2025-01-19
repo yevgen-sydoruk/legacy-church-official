@@ -1,11 +1,9 @@
 import Banner from "@/components/Banner/Banner";
-import React, { useEffect, useState } from "react";
+import React from "react";
 // import bannerImage from "../../../../public/legacy_youth_banner.jpg";
 import legacyYouthLogo from "../../../../public/legacy_youth_logo.png";
 import Link from "next/link";
-
 import LatestVideosBlock from "@/components/LatestVideosBlock/LatestVideosBlock";
-
 import YoutubeIcon from "../../../../assets/icons/YoutubeIcon";
 
 export const metadata = {
@@ -28,12 +26,14 @@ export default function Watch() {
     <section className="pt-[120px]">
       {/* Banner Component */}
       <Banner heading={"Watch Us Online"} text={""} bannerImage={legacyYouthLogo} />
+
       <div className="mx-auto px-10 py-8">
         <h2 className="lg:text-6xl text-4xl font-[300] text-center lato">
           Watch Our Latest Sermons
         </h2>
       </div>
       <LatestVideosBlock />
+
       {/* YouTube Channel Link */}
       <div className="flex justify-center py-8 text-3xl font-bold">
         <Link

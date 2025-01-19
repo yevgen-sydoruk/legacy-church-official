@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { useVideos } from "@/context/VideosContext"; // Use context to access videos
+import { useAppContext } from "@/context"; // Use context to access videos
 
 export default function LatestVideosBlock() {
-  const { videos, loading } = useVideos();
+  const { videos, loading } = useAppContext();
 
   const formatDate = dateString => {
     const date = new Date(dateString);
