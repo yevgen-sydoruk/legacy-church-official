@@ -9,7 +9,7 @@ export default function LatestVideosBlock() {
   useEffect(() => {
     const fetchVideos = async () => {
       try {
-        const response = await fetch("/api/videos"); // Fetch from backend API
+        const response = await fetch("/api/VideosYoutube/videos"); // Fetch from backend API
         const data = await response.json();
         setVideos(data.items); // Extract video data
       } catch (error) {

@@ -10,7 +10,7 @@ export default function WatchService() {
   useEffect(() => {
     const fetchVideo = async () => {
       try {
-        const response = await fetch("/api/videos");
+        const response = await fetch("/api/VideosYoutube/videos");
         const data = await response.json();
         setVideo(data.items?.[0]); // Get the latest video
       } catch (error) {
