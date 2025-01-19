@@ -1,5 +1,5 @@
 import Banner from "@/components/Banner/Banner";
-import React from "react";
+import React, { useEffect, useState } from "react";
 // import bannerImage from "../../../../public/legacy_youth_banner.jpg";
 import legacyYouthLogo from "../../../../public/legacy_youth_logo.png";
 import Link from "next/link";

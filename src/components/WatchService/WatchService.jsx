@@ -3,8 +3,8 @@
 import React from "react";
 import Link from "next/link";
 
-export default function WatchService({ videos }) {
-  const video = videos?.[0]; // Get the latest video
+export default function WatchService() {
+  const { videos, loading } = useVideos();
 
   const formatDate = dateString => {
     if (!dateString) return "Unknown Date";
@@ -24,18 +24,22 @@ export default function WatchService({ videos }) {
       </div>
 
       <div className="mx-auto px-10 py-8 items-center text-center gap-5">
-        {video ? (
+        {loading ? (
+          <p>Loading video...</p>
+        ) : videos.length > 0 ? (
           <div className="flex flex-col items-center">
             <iframe
-              src={`https://www.youtube.com/embed/${video.id?.videoId}`}
-              title={video.snippet?.title || "YouTube Video"}
+              src={`https://www.youtube.com/embed/${videos[0]?.id.videoId}`}
+              title={videos[0]?.snippet.title || "YouTube Video"}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
               className="w-full aspect-video"
             ></iframe>
-            <p className="mt-4 text-lg font-bold">{video.snippet?.title || "Untitled Video"}</p>
-            <p className="mt-2 text-sm text-gray-500">{formatDate(video.snippet?.publishedAt)}</p>
+            <p className="mt-4 text-lg font-bold">{videos[0]?.snippet?.title}</p>
+            <p className="mt-2 text-sm text-gray-500">
+              {formatDate(videos[0]?.snippet?.publishedAt)}
+            </p>
           </div>
         ) : (
           <p>No video available.</p>
