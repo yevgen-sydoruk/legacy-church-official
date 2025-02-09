@@ -137,7 +137,7 @@ export default function Header({ isHome }) {
               className={isActive ? "hidden" : "hidden lg:flex items-center gap-4 uppercase"}
             >
               <li>
-                <Link className="hover:text-[#3498db]" href="/">
+                <Link className="hover:text-[#195A86]" href="/">
                   Home
                 </Link>
               </li>
@@ -148,13 +148,13 @@ export default function Header({ isHome }) {
                 <Dropdown linksList={connectLinks} title="Connect" />
               </li>
               <li>
-                <Link className="hover:text-[#3498db]" href="/watch">
+                <Link className="hover:text-[#195A86]" href="/watch">
                   Watch
                 </Link>
               </li>
 
               <li>
-                <Link className="hover:text-[#3498db]" href="/give">
+                <Link className="hover:text-[#195A86]" href="/give">
                   Give
                 </Link>
               </li>

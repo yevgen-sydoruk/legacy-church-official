@@ -65,35 +65,6 @@ export default function MiraclesChallengeBlock() {
                 <p className="lg:text-5xl text-3xl font-extralight">{miracle.text}</p>
               </SwiperSlide>
             ))}
-
-            {/* <SwiperSlide className="p-10 my-auto">
-              <h3 className="sm:text-xl text-lg pb-5">Praise Report #30</h3>
-              <p className="lg:text-5xl text-3xl font-extralight">
-                My daughter hasn't spoken to me in 4 years. She called me on the phone last week and
-                we had a nice conversation. Praise God!
-              </p>
-            </SwiperSlide>
-            <SwiperSlide className="p-10 my-auto">
-              <h3 className="sm:text-xl text-lg pb-5">Praise Report #29</h3>
-              <p className="lg:text-5xl text-3xl font-extralight">
-                After Outpour Prayer Night, the Lord blessed and touched my heart. I felt called to
-                start serving at church.
-              </p>
-            </SwiperSlide>
-            <SwiperSlide className="p-10 my-auto">
-              <h3 className="sm:text-xl text-lg pb-5">Praise Report #28</h3>
-              <p className="lg:text-5xl text-3xl font-extralight">
-                I've always been ashamed of my identity which makes me struggle with self esteem. At
-                outpour prayer night, I felt the Lord take it away. I started freely introducing
-                myself to people because I felt no shame anymore.
-              </p>
-            </SwiperSlide>
-            <SwiperSlide className="p-10 my-auto">
-              <h3 className="sm:text-xl text-lg pb-5">Praise Report #27</h3>
-              <p className="lg:text-5xl text-3xl font-extralight">
-                God showed up for my family and granted us victory in a judicial fight.
-              </p>
-            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>

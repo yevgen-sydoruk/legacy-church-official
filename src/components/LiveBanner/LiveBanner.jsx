@@ -13,27 +13,19 @@ export default function LiveBanner() {
     const fetchStreamStatus = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`https://www.googleapis.com/youtube/v3/search`, {
-          params: {
-            part: "snippet",
-            channelId: `${process.env.NEXT_PUBLIC_CHANNEL_ID}`,
-            eventType: "live",
-            type: "video",
-            key: `${process.env.NEXT_PUBLIC_YOUTUBE_KEY}`
-          }
-        });
+        const response = await axios.get(`/api/liveStreamStatus`);
+        const liveStream = response.data;
 
-        const liveStream = response.data.items[0]; // Assuming there's a live stream
         if (liveStream) {
           setShowBanner(true);
-          setStreamTitle(liveStream.snippet.title); // Not sure if needed, check the actual title
-          setStreamVideoId(liveStream.id.videoId); // Save the video ID
+          setStreamTitle(liveStream.snippet.title);
+          setStreamVideoId(liveStream.id.videoId);
         } else {
           setShowBanner(false);
         }
       } catch (error) {
         console.error("Error fetching YouTube stream status:", error);
-        setShowBanner(false); // Hide the banner if there's an error
+        setShowBanner(false);
       } finally {
         setLoading(false);
       }

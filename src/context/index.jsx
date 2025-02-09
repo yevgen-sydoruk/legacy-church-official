@@ -12,11 +12,11 @@ export function AppWrapper({ children }) {
 
   useEffect(() => {
     const fetchVideos = async () => {
+      if (videos.length > 0) return;
       try {
         const response = await fetch("/api/VideosYoutube");
         const data = await response.json();
-        setVideos(data.items); // Store all 4 videos in state
-        console.log(videos);
+        setVideos(data); // Store all 4 videos in state
       } catch (error) {
         console.error("Error fetching videos:", error);
       } finally {
@@ -25,7 +25,7 @@ export function AppWrapper({ children }) {
     };
 
     fetchVideos();
-  }, []);
+  }, [videos]);
 
   return <AppContext.Provider value={{ videos, loading }}>{children}</AppContext.Provider>;
 }
