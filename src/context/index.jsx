@@ -25,7 +25,7 @@ export function AppWrapper({ children }) {
     };
 
     fetchVideos();
-  }, [videos]);
+  }, []);
 
   return <AppContext.Provider value={{ videos, loading }}>{children}</AppContext.Provider>;
 }
