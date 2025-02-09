@@ -1,8 +1,10 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import miracles_list from "@../../../assets/miracles_list";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -57,7 +59,14 @@ export default function MiraclesChallengeBlock() {
             modules={[Autoplay, Pagination, Navigation]}
             className="bg-[#3498db] text-white text-center"
           >
-            <SwiperSlide className="p-10 my-auto">
+            {miracles_list.slice(0, 5).map((miracle, index) => (
+              <SwiperSlide key={index} className="p-10 my-auto">
+                <h3 className="sm:text-xl text-lg pb-5">{miracle.header}</h3>
+                <p className="lg:text-5xl text-3xl font-extralight">{miracle.text}</p>
+              </SwiperSlide>
+            ))}
+
+            {/* <SwiperSlide className="p-10 my-auto">
               <h3 className="sm:text-xl text-lg pb-5">Praise Report #30</h3>
               <p className="lg:text-5xl text-3xl font-extralight">
                 My daughter hasn't spoken to me in 4 years. She called me on the phone last week and
@@ -84,7 +93,7 @@ export default function MiraclesChallengeBlock() {
               <p className="lg:text-5xl text-3xl font-extralight">
                 God showed up for my family and granted us victory in a judicial fight.
               </p>
-            </SwiperSlide>
+            </SwiperSlide> */}
           </Swiper>
         </div>
       </div>
