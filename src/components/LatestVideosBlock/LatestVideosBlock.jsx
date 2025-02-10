@@ -35,8 +35,8 @@ export default function LatestVideosBlock() {
               ></iframe>
 
               <p className="mt-4 text-lg font-bold">
-                {/* {video.title} - {formatDate(video.publishedAt)} */}
-                {video.title}
+                {video.title} - {formatDate(video.publishedAt)}
+                {/* {video.title} */}
               </p>
             </div>
           ))}

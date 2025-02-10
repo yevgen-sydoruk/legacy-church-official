@@ -6,18 +6,18 @@ const YOUTUBE_API_URL = "https://www.googleapis.com/youtube/v3/search";
 export async function GET() {
   try {
     const storedVideos = await get("youtube_videos");
-
     // Check if data exists and is not older than 7 days
     if (storedVideos && storedVideos.length > 0) {
       const latestVideoDate = new Date(storedVideos[0].publishedAt);
       const sevenDaysAgo = new Date();
       sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
-
-      if (latestVideoDate > sevenDaysAgo) {
+      console.log("sevenDaysAgo ", sevenDaysAgo);
+      console.log("latestVideoDate ", latestVideoDate);
+      if (latestVideoDate < sevenDaysAgo) {
+        console.log("Getting stored videos from EDGE!");
         return new Response(JSON.stringify(storedVideos), { status: 200 });
       }
     }
-
     // Fetch new videos from YouTube API
     // Use validateStatus to prevent axios from throwing on 403/500
     const response = await axios.get(YOUTUBE_API_URL, {
@@ -32,7 +32,7 @@ export async function GET() {
       },
       validateStatus: () => true // Always resolve, even for error status codes
     });
-
+    //console.log("Data from Youtube API", response);
     // If the response status is 403 or 500 (or not in the 2xx range), return the fallback video.
     if (
       response.status === 403 ||
@@ -46,6 +46,7 @@ export async function GET() {
         publishedAt: new Date().toISOString(),
         thumbnail: "https://img.youtube.com/vi/Nms6aR6nWao/mqdefault.jpg"
       };
+      console.log("Getting Fallback video!");
       return new Response(JSON.stringify([fallbackVideo]), { status: 200 });
     }
 
@@ -56,7 +57,7 @@ export async function GET() {
       publishedAt: video.snippet.publishedAt
       //thumbnail: video.snippet.thumbnails.medium.url
     }));
-
+    //console.log("SORTED Data from Youtube API", videos);
     // Store new videos in Edge Config
     //await set("youtube_videos", videos);
     try {
@@ -71,7 +72,7 @@ export async function GET() {
           body: JSON.stringify({
             items: [
               {
-                operation: "update",
+                operation: "upsert",
                 key: "youtube_videos",
                 value: videos
               }
@@ -80,11 +81,11 @@ export async function GET() {
         }
       );
       const result = await updateEdgeConfig.json();
-      console.log(result);
+      console.log("result of updating Edge", result);
     } catch (error) {
       console.log(error);
     }
-
+    console.log("Getting videos from API!");
     return new Response(JSON.stringify(videos), { status: 200 });
   } catch (error) {
     console.error("Error fetching YouTube videos:", error);

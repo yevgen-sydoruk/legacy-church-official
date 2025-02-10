@@ -13,7 +13,7 @@ export default function LiveBanner() {
     const fetchStreamStatus = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`/api/liveStreamStatus`);
+        const response = await axios.get(`/api/LiveStreamStatus`);
         const liveStream = response.data;
 
         // Check if liveStream data exists and has the expected structure

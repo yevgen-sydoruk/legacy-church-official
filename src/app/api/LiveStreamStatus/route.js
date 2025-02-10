@@ -5,11 +5,12 @@ let cachedLiveStatus = null;
 let lastFetched = 0;
 const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 
-export default async function handler(req, res) {
+export async function GET(request) {
   const now = Date.now();
 
   if (cachedLiveStatus && now - lastFetched < CACHE_DURATION) {
-    return res.status(200).json(cachedLiveStatus);
+    console.log("Log: Captured in LiveStreamStatus when cache is on");
+    return new Response(JSON.stringify(cachedLiveStatus), { status: 200 });
   }
 
   try {
@@ -39,16 +40,16 @@ export default async function handler(req, res) {
       //   lastFetched = now;
       //   return res.status(200).json(null);
       // }
-
+      console.log("response.data.items[0]: ", response.data.items[0]);
       const liveStream = response.data.items[0] || null;
       cachedLiveStatus = liveStream;
       lastFetched = now;
-      return res.status(200).json(liveStream);
+      return new Response(JSON.stringify(liveStream), { status: 200 });
     } else {
-      return null;
+      return new Response(null, { status: 200 });
     }
   } catch (error) {
     console.error("Error fetching live stream:", error);
-    return res.status(500).json({ error: "Failed to fetch live stream." });
+    return new Response(JSON.stringify({ error: "Failed to fetch live stream." }), { status: 500 });
   }
 }
