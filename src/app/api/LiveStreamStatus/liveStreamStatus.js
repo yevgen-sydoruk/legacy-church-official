@@ -20,8 +20,22 @@ export default async function handler(req, res) {
         eventType: "live",
         type: "video",
         key: process.env.NEXT_PUBLIC_YOUTUBE_KEY
-      }
+      },
+      validateStatus: () => true
     });
+
+    if (
+      response.status === 403 ||
+      response.status === 404 ||
+      response.status === 500 ||
+      response.status < 200 ||
+      response.status >= 300
+    ) {
+      console.warn(`YouTube API returned status ${response.status}. Falling back to null.`);
+      cachedLiveStatus = null;
+      lastFetched = now;
+      return res.status(200).json(null);
+    }
 
     const liveStream = response.data.items[0] || null;
     cachedLiveStatus = liveStream;
@@ -29,6 +43,6 @@ export default async function handler(req, res) {
     return res.status(200).json(liveStream);
   } catch (error) {
     console.error("Error fetching live stream:", error);
-    return res.status(500).json({ error: "Failed to fetch live stream." });
+    return res.status(200).json(null);
   }
 }

@@ -25,8 +25,9 @@ export default function LatestVideosBlock() {
           {videos.slice(0, 4).map(video => (
             <div key={video.id.videoId} className="flex flex-col items-center">
               <iframe
-                src={`https://www.youtube.com/embed/${video.id.videoId}`}
-                title={video.snippet.title}
+                src={`https://www.youtube.com/embed/${video.id}`}
+                //title={video.title || "YouTube Video"}
+                title={"YouTube Video"}
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
@@ -34,7 +35,8 @@ export default function LatestVideosBlock() {
               ></iframe>
 
               <p className="mt-4 text-lg font-bold">
-                {video.snippet.title} - {formatDate(video.snippet.publishedAt)}
+                {/* {video.title} - {formatDate(video.publishedAt)} */}
+                {video.title}
               </p>
             </div>
           ))}

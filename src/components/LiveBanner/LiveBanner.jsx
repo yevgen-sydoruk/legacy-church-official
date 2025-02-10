@@ -16,15 +16,18 @@ export default function LiveBanner() {
         const response = await axios.get(`/api/liveStreamStatus`);
         const liveStream = response.data;
 
-        if (liveStream) {
+        // Check if liveStream data exists and has the expected structure
+        if (liveStream && liveStream.snippet && liveStream.id && liveStream.id.videoId) {
           setShowBanner(true);
           setStreamTitle(liveStream.snippet.title);
           setStreamVideoId(liveStream.id.videoId);
         } else {
+          // If there's no live stream data, do not show the banner
           setShowBanner(false);
         }
       } catch (error) {
         console.error("Error fetching YouTube stream status:", error);
+        // On error, we simply do not show the banner
         setShowBanner(false);
       } finally {
         setLoading(false);

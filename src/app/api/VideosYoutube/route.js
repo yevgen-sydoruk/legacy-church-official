@@ -1,4 +1,4 @@
-import { get, set } from "@vercel/edge-config";
+import { get } from "@vercel/edge-config";
 import axios from "axios";
 
 const YOUTUBE_API_URL = "https://www.googleapis.com/youtube/v3/search";
@@ -19,6 +19,7 @@ export async function GET() {
     }
 
     // Fetch new videos from YouTube API
+    // Use validateStatus to prevent axios from throwing on 403/500
     const response = await axios.get(YOUTUBE_API_URL, {
       params: {
         part: "snippet",
@@ -28,24 +29,73 @@ export async function GET() {
         maxResults: 4,
         order: "date",
         key: process.env.NEXT_PUBLIC_YOUTUBE_KEY
-      }
+      },
+      validateStatus: () => true // Always resolve, even for error status codes
     });
+
+    // If the response status is 403 or 500 (or not in the 2xx range), return the fallback video.
+    if (
+      response.status === 403 ||
+      response.status === 500 ||
+      response.status < 200 ||
+      response.status >= 300
+    ) {
+      const fallbackVideo = {
+        id: "Nms6aR6nWao",
+        title: "Sunday Service",
+        publishedAt: new Date().toISOString(),
+        thumbnail: "https://img.youtube.com/vi/Nms6aR6nWao/mqdefault.jpg"
+      };
+      return new Response(JSON.stringify([fallbackVideo]), { status: 200 });
+    }
 
     // Transform data to store only necessary fields
     const videos = response.data.items.map(video => ({
       id: video.id.videoId,
       title: video.snippet.title,
-      publishedAt: video.snippet.publishedAt,
-      thumbnail: video.snippet.thumbnails.medium.url
+      publishedAt: video.snippet.publishedAt
+      //thumbnail: video.snippet.thumbnails.medium.url
     }));
 
     // Store new videos in Edge Config
-    await set("youtube_videos", videos);
+    //await set("youtube_videos", videos);
+    try {
+      const updateEdgeConfig = await fetch(
+        `https://api.vercel.com/v1/edge-config/${process.env.EDGE_CONFIG_ID}/items`,
+        {
+          method: "PATCH",
+          headers: {
+            Authorization: `Bearer ${process.env.VERCEL_API_TOKEN}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+            items: [
+              {
+                operation: "update",
+                key: "youtube_videos",
+                value: videos
+              }
+            ]
+          })
+        }
+      );
+      const result = await updateEdgeConfig.json();
+      console.log(result);
+    } catch (error) {
+      console.log(error);
+    }
 
     return new Response(JSON.stringify(videos), { status: 200 });
   } catch (error) {
     console.error("Error fetching YouTube videos:", error);
-    return new Response(JSON.stringify({ error: "Failed to fetch videos." }), { status: 500 });
+    // In case something unexpected happens, return the fallback video.
+    const fallbackVideo = {
+      id: { videoId: "Nms6aR6nWao" },
+      snippet: { title: "Fallback Video" },
+      publishedAt: new Date().toISOString(),
+      thumbnail: "https://img.youtube.com/vi/Nms6aR6nWao/mqdefault.jpg"
+    };
+    return new Response(JSON.stringify([fallbackVideo]), { status: 200 });
   }
 }
 

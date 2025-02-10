@@ -30,17 +30,15 @@ export default function WatchService() {
         ) : videos.length > 0 ? (
           <div className="flex flex-col items-center">
             <iframe
-              src={`https://www.youtube.com/embed/${videos[0]?.id.videoId}`}
-              title={videos[0]?.snippet.title || "YouTube Video"}
+              src={`https://www.youtube.com/embed/${videos[0]?.id}`}
+              title={videos[0]?.title || "YouTube Video"}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
               className="w-full aspect-video"
             ></iframe>
-            <p className="mt-4 text-lg font-bold">{videos[0]?.snippet?.title}</p>
-            <p className="mt-2 text-sm text-gray-500">
-              {formatDate(videos[0]?.snippet?.publishedAt)}
-            </p>
+            <p className="mt-4 text-lg font-bold">{videos[0]?.title}</p>
+            <p className="mt-2 text-sm text-gray-500">{formatDate(videos[0]?.publishedAt)}</p>
           </div>
         ) : (
           <p>No video available.</p>
