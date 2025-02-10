@@ -23,7 +23,7 @@ export default function LatestVideosBlock() {
       ) : videos.length > 0 ? (
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-10">
           {videos.slice(0, 4).map(video => (
-            <div key={video.id.videoId} className="flex flex-col items-center">
+            <div key={video.id} className="flex flex-col items-center">
               <iframe
                 src={`https://www.youtube.com/embed/${video.id}`}
                 //title={video.title || "YouTube Video"}
