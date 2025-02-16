@@ -67,13 +67,13 @@ export default function Volunteer() {
         <h2 className="sm:text-6xl text-4xl font-light text-center">
           Check out all the opportunities.
         </h2>
-        <p className="max-w-xl mx-auto font-light leading-8  text-center">
+        <p className="max-w-xl mx-auto font-light leading-8 text-center">
           Have a gift or talent not included here? We want to know about it! We believe in God-given
           gifts and want to help you steward yours for His glory!
         </p>
         <div className="grid grid-rows-2 grid-cols-1 md:grid-cols-2 auto-cols-auto gap-10 justify-items-center">
-          <div className="w-[400px] flex">
-            <div className="p-3 mr-8 border-2 border-[#3498db] rounded-full self-start text-center">
+          <div className="w-[400px] flex flex-col md:flex-row items-center">
+            <div className="p-3 mr-8 border-2 mb-4 border-[#3498db] rounded-full md:self-start text-center">
               <i className="pe-7s-users pe-3x pe-va text-[#3498db] w-[48px]"></i>
             </div>
             <div className="">
@@ -97,8 +97,8 @@ export default function Volunteer() {
               </ol>
             </div>
           </div>
-          <div className="w-[400px] flex">
-            <div className="p-3 mr-8 border-2 border-[#3498db] rounded-full self-start text-center">
+          <div className="w-[400px] flex flex-col md:flex-row items-center">
+            <div className="p-3 mr-8 border-2 mb-4 border-[#3498db] rounded-full md:self-start text-center">
               <i className="pe-7s-headphones pe-3x pe-va text-[#3498db] w-[48px]"></i>
             </div>
             <div className="">
@@ -116,8 +116,8 @@ export default function Volunteer() {
               </ol>
             </div>
           </div>
-          <div className="w-[400px] flex">
-            <div className="p-3 mr-8 border-2 border-[#3498db] rounded-full self-start text-center">
+          <div className="w-[400px] flex flex-col md:flex-row items-center">
+            <div className="p-3 mr-8 border-2 mb-4 border-[#3498db] rounded-full md:self-start text-center">
               <i className="pe-7s-camera pe-3x pe-va text-[#3498db] w-[48px]"></i>
             </div>
             <div className="">
@@ -138,8 +138,8 @@ export default function Volunteer() {
               </ol>
             </div>
           </div>
-          <div className="w-[400px] flex">
-            <div className="p-3 mr-8 border-2 border-[#3498db] rounded-full self-start text-center">
+          <div className="w-[400px] flex flex-col md:flex-row items-center">
+            <div className="p-3 mr-8 border-2 mb-4 border-[#3498db] rounded-full md:self-start text-center">
               <i className="pe-7s-music pe-3x pe-va text-[#3498db] w-[48px]"></i>
             </div>
             <div className="">

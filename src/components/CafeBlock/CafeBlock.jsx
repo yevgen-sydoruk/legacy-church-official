@@ -11,13 +11,13 @@ export default function CafeBlock() {
           </h2>
           <hr className="w-full" />
           <p className="max-w-lg">
-            Doing life together and sharing a cup of coffee together. We welcome you to join us
-            after service at our very own Legacy Cafe!
+            Doing life and sharing a cup of coffee together. We welcome you to join us after service
+            at our very own Legacy Cafe!
           </p>
           <p className="max-w-lg">
             Download the
             <Link
-              className="text-[#3498db] link-decoration-underline"
+              className="text-[#3498db] link-decoration-underline border border-[#3498db] rounded-md"
               href="https://apps.apple.com/us/app/legacy-church-official/id1622867116"
             >
               {" "}
@@ -27,7 +27,7 @@ export default function CafeBlock() {
             or
             <br></br>
             <Link
-              className="text-[#3498db] link-decoration-underline"
+              className="text-[#3498db] link-decoration-underline border border-[#3498db] rounded-md"
               href="https://play.google.com/store/apps/details?id=com.subsplashconsulting.s_X2WRGF&hl=en_US"
             >
               Legacy Church Official App for Android<br></br>{" "}

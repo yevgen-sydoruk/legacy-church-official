@@ -43,13 +43,7 @@ export default function Give() {
       <div className="bg-[#3498db] lg:flex justify-center text-white">
         <div className="lg:w-1/2 text-center lg:text-left w-full flex flex-col gap-5 p-10">
           <h2 className="sm:text-6xl text-4xl text-center">Ways To Give</h2>
-          <Link
-            // className="rounded-md border border-[#3498db] py-2 px-4 text-center text-2xl transition-all shadow-sm hover:shadow-lg hover:text-white hover:bg-[#3498db] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none uppercase"
-            className="rounded-md border border-[#3498db] bg-white py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-[#3498db] hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase"
-            href="https://www.kindridgiving.com/app/giving/kindrid-pd7n34q"
-          >
-            donate now
-          </Link>
+
           <hr />
           <div className="">
             <h3 className="text-xl font-bold text-center">Our Website/ App</h3>
@@ -65,7 +59,7 @@ export default function Give() {
               from your phone!
             </p>
           </div>
-          <div className="">
+          {/* <div className="">
             <h3 className="text-xl font-bold text-center">Give in Person</h3>
             <p className="text-lg text-center">
               Drop off any donations or entries in the wooden drop box located in the lobby. Please
@@ -75,8 +69,14 @@ export default function Give() {
           <div className="">
             <h3 className="text-xl font-bold text-center">Mail It</h3>
             <p className="text-lg text-center">Send gift to 780 Chicopee St, Chicopee, MA 01013.</p>
-          </div>
-
+          </div> */}
+          <Link
+            // className="rounded-md border border-[#3498db] py-2 px-4 text-center text-2xl transition-all shadow-sm hover:shadow-lg hover:text-white hover:bg-[#3498db] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none uppercase"
+            className="rounded-md border border-[#3498db] bg-white py-2 px-4 text-center text-xl transition-all shadow-lg hover:shadow-xl text-[#3498db] hover:text-white hover:bg-[#10364f] hover:border-[#3498db] focus:text-white focus:bg-[#3278a7] focus:border-[#3278a7] active:border-[#1d4560] active:text-white active:bg-[#1d4560] uppercase"
+            href="https://www.kindridgiving.com/app/giving/kindrid-pd7n34q"
+          >
+            donate now
+          </Link>
           <h3 className="text-xl font-bold text-center">
             Thank you for sowing into Legacy Church!
           </h3>

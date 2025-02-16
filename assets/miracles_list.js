@@ -63,6 +63,30 @@ let miracles_list = [
   {
     header: "Praise Report #20",
     text: `I had a really painful lump on my back that came out of nowhere. I put in my prayer request, the church prayed for me. The lump is completely gone, there's no trace of it ever being there.`
+  },
+  {
+    header: "Praise Report #6",
+    text: `A woman with sharp abdominal pain got healed by the power of God. The pain made it hard for her to sleep, but it went away after prayer.`
+  },
+  {
+    header: "Praise Report #5",
+    text: `A nursing student took her final exam, when she went to check her finale grade it said she hadn't taken her test. The only option given was to retake it. 5 minutes before the set retake time, the info of her first test popped up!`
+  },
+  {
+    header: "Praise Report #4",
+    text: `A family connected with our ministry and encountered the power of God. Their lives and family dynamic has radically changed!`
+  },
+  {
+    header: "Praise Report #3",
+    text: `We received a prayer request for a smooth surgery. God answered that prayer, and this person's surgery was successful with no complications.`
+  },
+  {
+    header: "Praise Report #2",
+    text: `A woman has been praying for 2 years for God to bring a miracle to her daughter. God answered her prayer just 30 minutes after connecting with us in prayer.`
+  },
+  {
+    header: "Praise Report #1",
+    text: `God brought judgment to a mother who was wrongfully reported to CPS. Her children are safe with her now.`
   }
 ];
 

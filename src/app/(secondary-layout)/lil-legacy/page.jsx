@@ -55,10 +55,6 @@ export default function LilLegacy() {
           The nursery is a quiet and comfortable room for nursing moms with young ones. We provide
           everything you need to take care of your little one while still enjoying the service.
         </p>
-        <h3 className="text-xl font-bold">Registration</h3>
-        <p className="max-w-2xl font-light leading-8">
-          Register and check in your child in the front lobby, see a volunteer with a lanyard!
-        </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mx-auto px-10 py-16 justify-items-center">
         <div

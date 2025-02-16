@@ -56,7 +56,7 @@ export default function Header({ isHome }) {
       setTimeout(() => {
         if (isHome) {
           // Home page scroll behavior
-          const isScrolled = window.scrollY > 910;
+          const isScrolled = window.scrollY > window.innerHeight;
           header.firstElementChild.classList.toggle("hidden", isScrolled);
           header.classList.toggle("bg-[#3498db]", isScrolled);
           header.classList.toggle("shadow-[0_6px_8px_-1px_rgba(0,0,0,0.3)]", isScrolled);

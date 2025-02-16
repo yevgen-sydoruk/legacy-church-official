@@ -172,7 +172,7 @@ export default function LegacyCafe() {
             target="_blank"
             className="flex flex-col text-center gap-4 items-center text-[#3498db] hover:text-cyan-700"
           >
-            Follow LEGACY Cafe on Instagram
+            Follow Legacy Cafe
             <InstagramIcon styles="fill-[#3498db] hover:fill-cyan-700" />
           </a>
         </Link>

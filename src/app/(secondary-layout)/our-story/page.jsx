@@ -27,7 +27,7 @@ export default function OurStory() {
     <section className="pt-[120px]">
       <Banner heading={"Our Story"} text={""} bannerImage={bannerImage} />
       <div className="mx-auto w-full flex flex-col md:flex-row gap-8 p-16">
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className=" mb-10 lg:text-6xl text-4xl font-light">How it all started...</h2>
           <p className="font-light leading-8">
             Legacy Church originated as the Church of the New Covenant on July 20, 1997, made up of
@@ -52,7 +52,7 @@ export default function OurStory() {
           alt="Picture of the new church in Chicopee, MA"
           className="w-full md:w-1/2 order-2 md:order-1 max-w-lg"
         />
-        <div className="w-full md:w-1/2 order-1 md:order-2">
+        <div className="w-full text-center md:w-1/2 md:text-left order-1 md:order-2">
           <h2 className="mb-10 lg:text-6xl text-4xl font-light">Expanding the vision...</h2>
           <p className="font-light leading-8">
             Throughout that time, the church became more and more effective at reaching and serving
@@ -64,7 +64,7 @@ export default function OurStory() {
         </div>
       </div>
       <div className="mx-auto w-full flex flex-col md:flex-row gap-8 p-16">
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 text-center md:text-left">
           <h2 className=" mb-10 lg:text-6xl text-4xl font-light">Where we are headed...</h2>
           <p className="font-light leading-8">
             Today, we are steadily growing in fellowship, ministry, discipleship, evangelism, and
